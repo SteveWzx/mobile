@@ -7,5 +7,6 @@
 * mobile-tech -> Mobile client development
 * useZepto -> How to use zepto
 * mobile-layout-example -> mobile layout exmaple
+* infiniteScrollPage -> Infinite drop distributed components, can be customized to automatically load pages and flexible configuration manual loading
 
 
