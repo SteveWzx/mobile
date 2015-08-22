@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, user-scalable=0" charset="UTF-8">
+    <title>js touch事件</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 1.2em;
+}
+h1{
+    line-height: 20px;
+    font-size: 1.4rem;
+}
+.js_touch_box{
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    background-color: #eee;
+}
+.js_touch_item{
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 3rem;
+    background-color: red;
+
+}
+</style>
+</head>
+<body>
+<h1>touch事件touchstart、touchend、touchmove使用</h1>
+<div class="js_touch_box">
+    <div class="js_touch_item">拖拽我</div>
+</div>
+<script src="../js/zepto-touch.min.js"></script>
+<script>
+(function(){
+    var domX = 0;
+    var domY = 0;
+    var startX = 0;
+    var startY = 0;
+    var curX = 0;
+    var curY = 0;
+    var moveX = 0;
+    var moveY = 0;
+    var $jsBox = $('.js_touch_box');
+    var $jsItem = $('.js_touch_item');
+    var box_left = $jsBox.offset().left;
+    var box_top = $jsBox.offset().top;
+    $jsItem.on('touchstart',function(e){
+        // 手指放在DOM上的坐标
+        startX = e.touches[0].pageX;
+        startY = e.touches[0].pageY;
+    });
+    $jsItem.on('touchmove',function(e){
+        // 禁止滑动事件
+        e.preventDefault();
+        // 手指拖拽DOM时的坐标
+        curX = e.touches[0].pageX;
+        curY = e.touches[0].pageY;
+        // 总距离
+        moveX = curX - startX;
+        moveY = curY - startY;
+
+        jsMove(domX+moveX, domY+moveY);
+    });
+    $jsItem.on('touchend',function(){
+        // 记录上次的距离
+        domX += moveX;
+        domY += moveY;
+    });
+    function jsMove(x,y){
+        $jsItem.css({'-webkit-transform':'translate3d('+x+'px,'+y+'px,0)','transform':'translate3d('+x+'px,'+y+'px,0)'});
+    }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, user-scalable=0" charset="UTF-8">
+    <title>Zepto常用方法</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 1.2rem;
+}
+h1{
+    line-height: 50px;
+    font-size: 2.4rem;
+    text-align: center;
+}
+h2{
+    line-height: 30px;
+    padding-top: 10px;
+    font-size: 1.8rem;
+}
+.example{
+    position: relative;
+    border: 1px solid #ccc;
+}
+.example .btn_example{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    background-color: #f00;
+    color: #fff;
+    text-decoration: none;
+}
+
+/*用CSS实现animate动画*/
+.css_animate{
+    height: 100px;
+}
+.css_animate .box{
+    width: 50px;
+    height: 50px;
+    background-color: #f00;
+    color: #fff;
+}
+.css_animate .box.move{
+    -webkit-animation:css_animate 3s linear forwards;
+    animation:css_animate 3s linear forwards;
+}
+@-webkit-keyframes css_animate{
+    0%{
+        -webkit-transform:translate(0,0);
+        transform:translate(0,0);
+        background-color: #f00;
+        opacity: 1;
+    }
+    33%{
+        -webkit-transform:translate(100px,50px);
+        transform:translate(100px,50px);
+        background-color: #f00;
+        opacity: 1;
+    }
+    66%{
+        -webkit-transform:translate(100px,50px);
+        transform:translate(100px,50px);
+        background-color: #00f;
+        opacity: 1;
+    }
+    100%{
+        -webkit-transform:translate(100px,50px);
+        transform:translate(100px,50px);
+        background-color: #f00;
+        opacity: 0;
+    }
+}
+
+/*用CSS实现slide*滑动效果*/
+.css_slide_toggle{
+    height: 100px;
+}
+.css_slide_toggle .slide_toggle{
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    background-color: #f00;
+    -webkit-transition:height .5s linear;
+    transition:height .5s linear;
+}
+.css_slide_toggle .slide_toggle.slide{
+    height: 0;
+}
+
+/*勾选协议，激活按钮*/
+.css_agreement{
+    padding-bottom: 10px;
+}
+.css_agreement .agreement{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+}
+.css_agreement .agreement input{
+    vertical-align: middle;
+}
+.css_agreement .agreement label{
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+}
+.css_agreement .btn_box{
+    text-align: center;
+}
+.css_agreement .btn{
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    background-color: #f00;
+    color: #fff;
+    text-decoration: none;
+}
+.css_agreement .btn.disable{
+    background-color: #dedede;
+}
+
+/*获取select的文本和value*/
+.css_select_value{
+    padding:10px;
+}
+.css_select_value p{
+    line-height: 20px;
+}
+</style>
+</head>
+<body>
+<h1>Zepto常用方法</h1>
+
+<h2>用CSS实现animate动画</h2>
+<div class="example css_animate">
+    <div class="box">
+        先向右<br>
+        再变色<br>
+        最后渐隐
+    </div>
+    <a href="javascript:;" class="btn_example">执行按钮</a>
+</div>
+
+<h2>用CSS实现slide*滑动效果</h2>
+<div class="example css_slide_toggle">
+    <div class="slide_toggle"></div>
+    <p>正文正文正文正文</p>
+    <a href="javascript:;" class="btn_example">执行按钮</a>
+</div>
+
+<h2>勾选协议，激活按钮</h2>
+<div class="example css_agreement">
+    <div class="agreement">
+        <input type="checkbox" id="check_agreement">
+        <label for="check_agreement">同意注册协议</label>
+    </div>
+    <div class="btn_box">
+        <a href="javascript:;" class="btn disable">注册</a>
+    </div>
+</div>
+
+<h2>获取select的文本和value</h2>
+<div class="example css_select_value">
+    <p>
+        <select>
+            <option value="Monday">星期一</option>
+            <option value="Tuesday">星期二</option>
+            <option value="Wednesday">星期三</option>
+            <option value="Thursday">星期四</option>
+            <option value="Friday">星期五</option>
+            <option value="Saturday">星期六</option>
+            <option value="Sunday">星期日</option>
+        </select>
+    </p>
+    <p>您选择的是<span class="text_cn"></span><span class="text_en"></span></p>
+</div>
+
+<script src="js/zepto-touch.min.js"></script>
+<script>
+$(function(){
+    // 用CSS实现animate动画
+    $('.css_animate .btn_example').on('click',function(){
+        $('.css_animate .box').addClass('move');
+    });
+
+    // 用CSS实现slide*滑动效果
+    $('.css_slide_toggle .btn_example').on('click',function(){
+        var $slideToggle = $('.slide_toggle');
+        if($slideToggle.hasClass('slide')){
+            $slideToggle.removeClass('slide');
+        }else{
+            $slideToggle.addClass('slide');
+        }
+    });
+
+    // 勾选协议，激活按钮
+    $('#check_agreement').on('change',function(){
+        if(!!$(this).prop('checked')){
+            $('.css_agreement .btn').removeClass('disable');
+        }else{
+            $('.css_agreement .btn').addClass('disable');
+        }
+    });
+
+    // 获取select的文本和value
+    $('.css_select_value select').on('change',function(){
+        var $this = $(this);
+        $('.css_select_value .text_cn').text($this.val());
+        $('.css_select_value .text_en').text($this.find("option").eq($this.attr("selectedIndex")).text());
+    });
+});
+</script>
+</body>
+</html>

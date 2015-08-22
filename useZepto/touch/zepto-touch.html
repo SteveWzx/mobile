@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, user-scalable=0" charset="UTF-8">
+    <title>Zepto touch模块</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-size: 1.2em;
+}
+h1{
+    line-height: 20px;
+    font-size: 1.4rem;
+}
+.z_touch_box{
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    background-color: #eee;
+}
+.z_touch_item{
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 3rem;
+    background-color: red;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-transform: translate(100%, 100%);
+    transform: translate(100%, 100%);
+}
+</style>
+</head>
+<body>
+<h1>Zepto的singleTap、doubleTap、swipeLeft、swipeRight、swipeUp、swipeDown使用</h1>
+<div class="z_touch_box">
+    <div class="z_touch_item">点我</div>
+</div>
+<script src="../js/zepto-touch.min.js"></script>
+<script>
+(function(){
+    var x = 1;
+    var y = 1;
+    var $zBox = $('.z_touch_box');
+    var $zItem = $('.z_touch_item');
+    // 禁止滑动事件
+    $zBox.on('touchmove',function(e){
+        e.preventDefault();
+    });
+
+    $zItem.singleTap(function(){
+        alert('双击我有惊喜哟☺');
+    });
+    $zItem.doubleTap(function(){
+        alert('敢不敢滑动我？');
+    });
+    $zBox.swipeLeft(function(){
+        x--;
+        zMove(x,y);
+    });
+    $zBox.swipeRight(function(){
+        x++;
+        zMove(x,y);
+    });
+    $zBox.swipeUp(function(){
+        y--;
+        zMove(x,y);
+    });
+    $zBox.swipeDown(function(){
+        y++;
+        zMove(x,y);
+    });
+    function zMove(x,y){
+        $zItem.css({'-webkit-transform':'translate('+x+'00%,'+y+'00%)','transform':'translate('+x+'00%,'+y+'00%)'});
+    }
+})();
+</script>
+</body>
+</html>
