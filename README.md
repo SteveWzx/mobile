@@ -5,5 +5,7 @@
 * mobileHack -> [Here to collect a number of mobile terminal encountered on a variety of pit and relative solutions](https://github.com/RubyLouvre/mobileHack)
 * trip -> [Mobile terminal experience](https://github.com/doyoe/trip)
 * mobile-tech -> Mobile client development
+* useZepto -> How to use zepto
+* mobile-layout-example -> mobile layout exmaple
 
 
