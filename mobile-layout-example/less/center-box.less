@@ -1,0 +1,50 @@
+// common
+@import 'common.less';
+// reset
+@import 'base.less';
+
+body{
+    font-size: 1.2em;
+}
+
+h2{
+    line-height: 3em;
+}
+
+// Flexbox
+.wrap_1,.wrap_2{
+    height: 200px;
+    border: 1px solid #ccc;
+    .display(flex);
+    .justify-content();
+    .align-items();
+}
+// translate
+.wrap_3,.wrap_4{
+    position: relative;
+    height: 200px;
+    border: 1px solid #ccc;
+    .block,.inline{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        .translate(-50%,-50%);
+    }
+}
+// 固定大小垂直居中
+.block{
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+}
+// 不固定大小垂直居中
+.inline{
+    display: inline-block;
+    line-height: 20px;
+    padding: 10px;
+    background-color: red;
+    color: #fff;
+}
