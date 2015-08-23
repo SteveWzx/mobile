@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta name="viewport" content="initial-scale=1, user-scalable=0, minimal-ui" charset="UTF-8">
+    <title>Retina屏幕下优化图片方法集合</title>
+<style>
+.item{
+    width: 134px;
+    height: 44px;
+}
+.item3{
+    background-image: url(http://mat1.gtimg.com/www/images/qq2012/qqlogo_2x.png);
+    background-repeat: no-repeat;
+    background-size: 134px 44px;
+}
+.item4{
+    background-image: url(http://www.baidu.com/img/baidu_jgylogo3.gif);
+    background-image: -webkit-image-set(url(http://mat1.gtimg.com/www/images/qq2012/qqlogo_2x.png) 2x);
+    background-repeat: no-repeat;
+}
+.item5{
+    background: url(http://www.baidu.com/img/baidu_jgylogo3.gif) no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+    .item5{
+        background-image: url(http://mat1.gtimg.com/www/images/qq2012/qqlogo_2x.png);
+        background-size: 134px 44px;
+    }
+}
+</style>
+</head>
+<body>
+<h1><a href="http://ons.me/" target="_blank" title="一个热爱网络的年轻人的博客">西门的后花园</a></h1>
+<h2><a href="http://ons.me/498.html" target="_blank">Retina屏幕下优化图片方法集合</a></h2>
+<h3>未针对Retina屏幕处理的图片</h3>
+<div class="item">
+    <img src="http://www.baidu.com/img/baidu_jgylogo3.gif" alt="" width="134" height="44">
+</div>
+
+<h3>方法一：img标签放2倍尺寸图片</h3>
+<p>全兼容</p>
+<div class="item item1">
+    <img src="http://mat1.gtimg.com/www/images/qq2012/qqlogo_2x.png" alt="" width="134" height="44">
+</div>
+
+<h3>方法二：img标签srcset属性</h3>
+<p>支持Chrome 34+</p>
+<div class="item item2">
+    <img src="http://www.baidu.com/img/baidu_jgylogo3.gif" srcset="http://mat1.gtimg.com/www/images/qq2012/qqlogo_2x.png 2x" alt="" width="134" height="44">
+</div>
+
+<h3>方法三：2倍背景图</h3>
+<p>全兼容</p>
+<div class="item item3"></div>
+
+<h3>方法四：背景图image-set</h3>
+<p>支持Chrome 21+、Safari 6+、iOS 6+</p>
+<div class="item item4"></div>
+
+<h3>方法五：媒体查询</h3>
+<p>全兼容</p>
+<div class="item item5"></div>
+
+<h3>方法六：JavaScript替换链接路径</h3>
+<p>全兼容</p>
+<div class="item item6">
+    <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-pic="http://www.baidu.com/img/baidu_jgylogo3.gif" data-pic2="http://mat1.gtimg.com/www/images/qq2012/qqlogo_2x.png" alt="" width="134" height="44">
+</div>
+
+<h3>有草案，但没浏览器支持的picture</h3>
+<div class="item">
+    <picture>
+        <source src="http://mat1.gtimg.com/www/images/qq2012/qqlogo_2x.png" media="(-webkit-min-device-pixel-ratio:2)">
+        <img src="http://www.baidu.com/img/baidu_jgylogo3.gif" alt="" width="134" height="44">
+    </picture>
+</div>
+<script src="http://libs.useso.com/js/zepto/1.1.3/zepto.min.js"></script>
+<script>
+$(function(){
+    var $img = $('img'),
+        _dpr = window.devicePixelRatio;
+    $img.each(function(i){
+        var $this = $(this);
+        $this.attr('src',$this.data(_dpr >= 1.5 ? 'pic2' : 'pic'));
+    });
+});
+</script>
+</body>
+</html>

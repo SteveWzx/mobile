@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=320,user-scalable=no,target-densitydpi=medium-dpi" />
+<title>无标题文档</title>
+<script>
+document.getElementsByTagName("html")[0].style.fontSize=document.documentElement.clientWidth/3+"px";
+</script>
+<style>
+@-webkit-keyframes show
+{
+	0%
+	{
+		top:calc(100% - 0.6rem);
+	}
+	50%
+	{
+		top:calc(100% - 0.3rem);
+	}
+	100%
+	{
+		top:calc(100% - 0.6rem);
+	}
+}
+@-moz-keyframes show
+{
+	0%
+	{
+		top:calc(100% - 0.6rem);
+	}
+	50%
+	{
+		top:calc(100% - 0.3rem);
+	}
+	100%
+	{
+		top:calc(100% - 0.6rem);
+	}
+}
+@keyframes show
+{
+	0%
+	{
+		top:calc(100% - 0.6rem);
+	}
+	50%
+	{
+		top:calc(100% - 0.3rem);
+	}
+	100%
+	{
+		top:calc(100% - 0.6rem);
+	}
+}
+body,ul{margin:0;padding:0; font-size:0.15rem; font-family:Arial,"宋体";}
+li{ list-style:none;}
+a{ text-decoration:none;color:#fff;}
+.page{ width:100%;height:100%; position:absolute; overflow:hidden; left:0;top:0;}
+header{ height:0.45rem; border-top:2px solid #353535; border-bottom:2px solid #353535;box-sizing:border-box;background:-webkit-linear-gradient(top,#292929,#1e1e1e);background:-moz-linear-gradient(top,#292929,#1e1e1e);background:linear-gradient(top,#292929,#1e1e1e); color:#fff; line-height:0.45rem; text-align:center;}
+.btn{height:0.25rem; position:absolute; width:0.5rem; top:0.05rem; border:2px solid #0d0d0d; line-height:0.25rem; right:10px; border-radius:5px; box-shadow:0 0 3px #0d0d0d,inset 0 0 2px #232323;}
+.btn:nth-of-type(1){ left:10px; right:auto; display:none;}
+.wrap{ position:absolute;left:0;width:100%;top:0.45rem;bottom:0.55rem;overflow:auto; background:#000;}
+footer{height:0.55rem; position:absolute;left:0;bottom:0;width:100%;background:#000;background:-webkit-linear-gradient(top,#1e1f21,#121212);background:-moz-linear-gradient(top,#1e1f21,#121212);background:linear-gradient(top,#1e1f21,#121212); line-height:0.55rem;}
+footer a{float:left;width:50%; text-align:center; box-sizing:border-box;}
+footer a:nth-of-type(1){border-right:1px solid #222222;}
+footer a:nth-of-type(2){border-left:1px solid #222222;}
+footer a.active{background:-webkit-linear-gradient(top,#101010,#070707);background:-moz-linear-gradient(top,#101010,#070707);background:linear-gradient(top,#101010,#070707); border-color:#0e0e0e;}
+.picList{ position:relative;}
+.picList li{ position:absolute;width:1rem;height:1rem;background:url(demo/video/1.jpg) no-repeat; background-size:cover; border:1px solid #000; box-sizing:border-box; transition:.5s left,.5s top;left:0;top:0;}
+.recycle{width:1.2rem;height:1.2rem; background:url(demo/img/recycle.png) no-repeat; background-size:cover; position:absolute;left:calc(50% - 0.6rem);top:100%; transition:0.5s;z-index:3;}
+.recycle:nth-of-type(1){ background-image:url(demo/img/recycle2.png);z-index:1;}
+.recycleShow{ -webkit-animation:.3s show;-moz-animation:.3s show;animation:.3s show;}
+.PicBox{width:1rem;height:1rem;-webkit-perspective:800px;-moz-perspective:800px;perspective:800px; position:absolute; background: no-repeat -1000px 0; overflow:hidden;z-index:2;}
+.PicBox div{width:0.1rem;height:1rem; position:absolute;left:0.1rem;top:0; background-repeat:no-repeat; background-image:inherit;background-size:cover; -webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;transform-style:preserve-3d; -webkit-transform-origin:left 0.8rem;-moz-transform-origin:left 0.8rem;transform-origin:left 0.8rem;}
+.PicBox>div{left:0;}
+.PicBox div.show{ -webkit-transform:rotateY(-60deg) rotateX(5deg);}
+.PicBox>div.show{-webkit-transform:rotateY(-60deg) rotateX(5deg) translateX(1rem);}
+</style>
+<script>
+var aData=[];
+for(var i=1;i<=16;i++)
+{
+	aData[i-1]="demo/video/"+i+".jpg";
+}
+</script>
+</head>
+<body>
+<article class="page" id="page">
+	<header>
+    	<a href="javascript:;" class="btn">删除</a>
+        相机相册
+        <a href="javascript:;" class="btn">选择</a>
+    </header>
+    <section class="wrap">
+    	<ul class="picList" id="picList">
+        </ul>
+    </section>
+    <footer>
+    	<a href="javascript:;" class="active">相机相册</a>
+        <a href="javascript:;">所有相册</a>
+    </footer>
+    <span class="recycle"></span>
+    <span class="recycle"></span>
+</article>
+<script>
+create(aData);
+function open3D(obj)
+{
+	var aDiv=obj.getElementsByTagName("div");
+	for(var i=0;i<aDiv.length;i++)
+	{
+		aDiv[i].style.transition="0.5s";
+		aDiv[i].className="show";
+	}
+}
+function clos3D(obj,oLi)
+{
+	var aDiv=obj.getElementsByTagName("div");
+	aDiv[aDiv.length-1].addEventListener("webkitTransitionEnd",fn,false);
+	aDiv[aDiv.length-1].addEventListener("transitionend",fn,false);
+	for(var i=0;i<aDiv.length;i++)
+	{
+		aDiv[i].style.transition="0.5s";
+		aDiv[i].className="";
+	}
+	function fn()
+	{
+		var oPage=document.getElementById("page");
+		aDiv[aDiv.length-1].removeEventListener("webkitTransitionEnd",fn,false);
+		aDiv[aDiv.length-1].removeEventListener("transitionend",fn,false);
+		oLi.style.opacity=1;
+		oPage.removeChild(obj);
+	}
+}
+function create(aData)
+{
+	var oPage=document.getElementById("page");
+	var oList=document.getElementById("picList");
+	var aLi=oList.getElementsByTagName("li");
+	var aBtns=oPage.getElementsByClassName("btn");
+	var aRecycle=oPage.getElementsByClassName("recycle");
+	var aPicBox=oPage.getElementsByClassName("PicBox");
+	var sHtml="";
+	var aRemove=[];
+	var bOff=true;
+	for(var i=0;i<aData.length;i++)
+	{
+		sHtml+="<li style='background-image:url("+aData[i]+");'></li>"
+	}
+	oList.innerHTML=sHtml;
+	toPosition();
+	aBtns[1].addEventListener("touchend",fnEnd,false);
+	aBtns[0].addEventListener("touchend",fnRemove,false);
+	function toPosition()
+	{
+		for(var i=0;i<aLi.length;i++)
+		{
+			aLi[i].style.left=i%3+"rem";
+			aLi[i].style.top=Math.floor(i/3)+"rem";
+		}
+	}
+	function fnEnd()
+	{
+		if(bOff)
+		{
+			aBtns[1].innerHTML="取消";
+			for(var i=0;i<aLi.length;i++)
+			{
+				aLi[i].index=i;
+				aLi[i].addEventListener("touchend",fnSelected,false);
+			}	
+		}
+		else
+		{
+			//alert(aRemove.length+"||"+aPicBox.length);
+			/*aBtns[1].innerHTML="选择";
+			aBtns[0].style.display="none";
+			for(var i=0;i<aLi.length;i++)
+			{
+				aLi[i].style.opacity=1;
+				aLi[i].removeEventListener("touchend",fnSelected,false);
+			}	
+			aRemove.length=0;*/
+			for(var i=0;i<aLi.length;i++)
+			{
+				aLi[i].removeEventListener("touchend",fnSelected,false);
+			}
+			for(var i=0;i<aRemove.length;i++)
+			{
+				clos3D(aPicBox[i],aLi[aRemove[i]]);
+			}
+			aBtns[1].innerHTML="选择";
+			aBtns[0].style.display="none";
+			aRemove.length=0;
+		}
+		bOff=!bOff;
+	}
+	function fnSelected()
+	{
+		aRemove.push(this.index);
+		this.style.opacity="0";
+		aBtns[0].style.display="block";
+		aRecycle[0].style.top=aRecycle[1].style.top="calc(100% - 0.4rem)";
+		create3d(this);
+	}	
+	function create3d(oLi)
+	{
+		var oDiv=document.createElement("div");
+		var oXy=getOffset(oLi);
+		oDiv.className="PicBox";
+		oDiv.style.backgroundImage=oLi.style.backgroundImage;
+		oDiv.style.left=oXy.l+"px";
+		oDiv.style.top=oXy.t+"px";
+		oDiv.innerHTML='<div><div style="background-position:-0.1rem 0;"><div style="background-position:-0.2rem 0;"><div style="background-position:-0.3rem 0;"><div style="background-position:-0.4rem 0;"><div style="background-position:-0.5rem 0;"><div style="background-position:-0.6rem 0;"><div style="background-position:-0.7rem 0;"><div style="background-position:-0.8rem 0;"><div style="background-position:-0.9rem 0;"></div></div></div></div></div></div></div></div></div></div>';
+		oPage.appendChild(oDiv);
+		setTimeout(function(){
+			open3D(oDiv);	
+		},30);
+	}
+	function fnRemove()
+	{
+		aRemove=aRemove.sort(function(a,b){
+			return a-b;
+		});
+		aRecycle[0].style.top=aRecycle[1].style.top="calc(100% - 0.6rem)";
+		/*while(aRemove.length)
+		{
+			var iNub=aRemove.pop();
+			fnDle(iNub);
+			//oList.removeChild(aLi[iNub]);
+		}*/
+		for(var i=0;i<aRemove.length;i++)
+		{
+			fnDle(i);
+		}
+		//bOff=false;
+		//toPosition();
+		//fnEnd();
+		setTimeout(function(){
+			aRecycle[0].className=aRecycle[1].className="recycle recycleShow";	
+			while(aRemove.length)
+			{
+				oPage.removeChild(aPicBox[aRemove.length-1]);
+				var iNub=aRemove.pop();
+				oList.removeChild(aLi[iNub]);
+			}	
+			toPosition();
+			fnEnd();
+		},650);
+		setTimeout(function(){
+			aRecycle[0].style.top=aRecycle[1].style.top="100%";	
+		},1000);
+	}
+	function fnDle(i)
+	{
+		var oBj=aPicBox[i];
+		var oLi=aLi[aRemove[i]];
+		oBj.style.transition=".3s left,.5s 0.3s top";
+		oBj.style.left="calc(50% - 0.5rem)";
+		oBj.style.top="100%";
+	}
+}
+function getOffset(obj)
+{
+	var l=0;
+	var t=0;
+	while(obj)
+	{
+		l+=obj.offsetLeft;
+		t+=obj.offsetTop;
+		obj=obj.offsetParent;
+	}
+	return {l:l,t:t};
+}
+</script>
+</body>
+</html>
