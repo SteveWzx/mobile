@@ -10,5 +10,6 @@
 * infiniteScrollPage -> Infinite drop distributed components, can be customized to automatically load pages and flexible configuration manual loading
 * album -> 3D album management
 * game -> H5 mobile game
+* gallery -> zepto/js mobile gallery 
 
 
