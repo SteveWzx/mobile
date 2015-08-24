@@ -1,0 +1,37 @@
+/**
+ * styling for DIVAS slider - how to page based on skin 1
+ * @author Federica Sibella - Michela Chiucini
+ * @date 2014/07/23
+ * @version 0.1
+ */
+body {
+   background: none repeat scroll 0 0 #fff;
+   color: #1A1A1A;
+   font-family: 'Source Sans Pro',Helvetica,Arial,sans-serif;
+   font-size: 62.5%;/*10px*/
+   font-weight: normal;
+   line-height: 1.4;
+   min-width: 20em;
+   position: relative;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+section{
+	position: relative;
+	width: 100%;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    margin: 0 auto;
+    padding: 0;
+    height: auto;
+}
+
+ul, ol {
+    list-style: none outside none;
+}
+
+
+a {
+	color: #FF744D;
+}

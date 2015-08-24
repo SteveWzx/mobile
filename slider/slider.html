@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Divas Slider - responsive slider, plugin jQuery</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true">
+
+    <!--可无视-->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/text.css" />
+
+
+    <!--必要样式-->
+    <link id="skin" rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.divas-1.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            $("#slider").divas({
+                slideTransitionClass: "divas-slide-transition-left",
+                titleTransitionClass: "divas-title-transition-left",
+                titleTransitionParameter: "left",
+                titleTransitionStartValue: "-999px",
+                titleTransitionStopValue: "0px",
+                wingsOverlayColor: "rgba(0,0,0,0.6)"
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+
+<section id="slider_wrapper">
+
+    <div id="slider" class="divas-slider">
+
+        <ul class="divas-slide-container">
+            <li class="divas-slide"><img src="images/placeholder.gif" alt="" data-src="images/img4.jpg" data-title="<h1>Divas Slider</h1><p>Images use lazy loading via deferred object</p>"/></li>
+            <li class="divas-slide"><img src="images/placeholder.gif" alt="" data-src="images/img3.jpg" data-title="<h1>Divas Slider</h1><p>You can style it as you wish via CSS</p>"/></li>
+            <li class="divas-slide"><img src="images/placeholder.gif" alt="" data-src="images/img5.jpg" data-title="<h1>Divas Slider</h1><p>Uses CSS3 transitions or jQuery.animate() as a fallback</p>" /></li>
+            <li class="divas-slide"><img src="images/placeholder.gif" alt="" data-src="images/img6.jpg" data-title="<h1>Divas Slider</h1><p>You can set up almost any slider style your desire</p>" /></li>
+            <li class="divas-slide"><img src="images/placeholder.gif" alt="" data-src="images/img7.jpg" data-title="<h1>Divas Slider</h1><p>Gives you extensive documentation and friendly support</p>" /></li>
+        </ul>
+
+        <div class="divas-navigation">
+            <span class="divas-prev">&nbsp;</span>
+            <span class="divas-next">&nbsp;</span>
+        </div>
+
+        <div class="divas-controls">
+            <span class="divas-start"><i class="fa fa-play"></i></span>
+            <span class="divas-stop"><i class="fa fa-pause"></i></span>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
