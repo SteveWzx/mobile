@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta name="format-detection" content="telephone=no">
+<meta content="320" name="MobileOptimized">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name=description content=e帮鞋>
+<meta name=keywords content=e帮鞋>
+<title>e帮鞋-选择城市</title>
+<link rel="shortcut icon" href="images/logo_50_50png.png"/>
+<link rel=stylesheet href="css/style.css">
+<link rel=stylesheet href="css/city.css">
+</head>
+<body>
+<div class="wrap">
+<header id="header" class="bg" style="position:relative;"><div class="city"><a target="_self" href="index.html"><h6>< 返回</h6></a></div>选择城市</header>
+<div id="wrapper" style="height:100%;">
+  <div id="scroller">
+       <!--城市选择区-->
+      <div class="city-selector px20">
+         <!--当前所选城市-->
+         <div class="city-item flex">
+          <h4 class="city-item-title">当前定位城市 :<small class="city-note">定位不准时，请在城市列表中选择</small></h4>
+          <a class="cur-city city-name"><span>北京</span></a>
+         </div>
+         <!--城市列表-->
+         <div class="city-item flex">
+          <h4 class="city-item-title">选择城市</h4>
+          <a class="city-name city-list"><span>北京</span></a>
+            <a class="city-name city-list"><span>上海</span></a>
+            <a class="city-name city-list"><span>广州</span></a>
+            <a class="city-name city-list"><span>深圳</span></a>
+            <a class="city-name city-list"><span>郑州</span></a>
+            <a class="city-name city-list"><span>遵义</span></a>
+            <a class="city-name city-list"><span>西安</span></a>
+            <a class="city-name city-list"><span>呼和浩特</span></a>
+            <a class="city-name city-list"><span>哈尔滨</span></a>
+            <a class="city-name city-list"><span>长春</span></a>
+            <a class="city-name city-list"><span>济南</span></a>
+            <a class="city-name city-list"><span>青岛</span></a>
+            <a class="city-name city-list"><span>新乡</span></a>
+            <a class="city-name city-list"><span>贵阳</span></a>
+            <a class="city-name city-list"><span>杭州</span></a>
+            <a class="city-name city-list"><span>重庆</span></a>
+            <a class="city-name city-list"><span>成都</span></a>
+            <a class="city-name city-list"><span>成都</span></a>
+            <a class="city-name city-list"><span>成都</span></a>
+            <a class="city-name city-list"><span>成都</span></a>
+            <a class="city-name city-list"><span>成都</span></a>
+            <a class="city-name city-list"><span>成都</span></a>
+            <a class="city-name city-list"><span>成都</span></a>
+            <a class="city-name city-list"><span>成都</span></a>
+            <a class="city-name city-list"><span>成都</span></a>
+            <a class="city-name city-list"><span>兰州</span></a>
+         </div>
+      </div>
+  </div>
+</div>
+<a class="totop bg hide">↑</a>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/iscroll.js" defer></script>
+<script>
+function log(content){  
+  window.console&&console.log(content);
+}
+function tap(selector,fn){
+    $(document).on("touchstart",selector,fn);
+}
+function tclick(selector,fn){
+    $(document).on("click",selector,fn);
+}
+$(function(){
+    //访问本地存储，取出来用户选择的城市
+    var
+     city = localStorage.getItem("city"),
+      myScroll = new IScroll('#wrapper', { 
+          bounceEasing: 'elastic',
+          bounceTime: 1200,
+          fadeScrollbars:true,//是否渐隐滚动条，关掉可以加速
+          scrollbars:true
+        }),
+     $totop = $(".totop");
+
+  if(city && city!=="null"){
+      $(".cur-city").find("span").html(city);
+  }
+    //当开始滑动时，把“返回顶部”显示出来
+    myScroll.on("scrollStart",function(){
+     clearInterval($totop.timer);
+     $totop.addClass("show");
+    })
+    //滑动结束时，延迟10秒隐藏“返回顶部”
+    myScroll.on("scrollEnd",function(){
+     $totop.timer = setTimeout(function(){
+       $totop.removeClass("show");
+     },10000)
+    })
+   tap(".totop",function(){
+        myScroll.scrollTo(0, 0,1000,IScroll.utils.ease.elastic)
+   })
+   tclick(".totop",function(){
+        myScroll.scrollTo(0, 0,1000,IScroll.utils.ease.elastic)
+   })
+   tap(".city-list span",function(){
+    localStorage.setItem("city",$(this).html());
+    var locationStr = location.toString();
+    location = location.toString().substring(0,location.toString().lastIndexOf("/"))+"/index.html";
+   }) 
+   tclick(".city-list span",function(){
+    localStorage.setItem("city",$(this).html());
+    var locationStr = location.toString();
+    location = location.toString().substring(0,location.toString().lastIndexOf("/"))+"/index.html";
+   }) 
+})
+/*iscroll的固定写法 end*/
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "//hm.baidu.com/hm.js?c47a84206681693e534ee69cbd180f19";
+var s = document.getElementsByTagName("script")[0]; 
+s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

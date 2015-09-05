@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>测试touch事件</title>
+<meta charset="utf-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta name="format-detection" content="telephone=no">
+<meta content="320" name="MobileOptimized">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style>
+  body{
+    padding: 0;
+    margin: 0;
+    height: 1000px;
+  }
+  .touch{
+     position: absolute;
+     width: 50px;
+     height: 50px;
+     background: red;
+     display: none;
+  }
+@-webkit-keyframes 'wobble' {
+  0%   {transform:rotate(3deg);}
+  25%  {transform:rotate(-3deg);}
+  50%  {transform:rotate(3deg);}
+  75%  {transform:rotate(-3deg);}
+  100% {transform:rotate(0);}
+}
+.long-tap {
+	 height: 100px;
+ width: 100px;
+ background: red;
+}
+.demo1 {
+ -webkit-animation-name:'wobble';/*动画属性名，也就是我们前面keyframes定义的动画名*/
+ -webkit-animation-duration: 1s;/*动画持续时间*/
+ -webkit-animation-timing-function: ease-in-out; /*动画频率，和transition-timing-function是一样的*/
+ -webkit-animation-iteration-count: 10;/*定义循环资料，infinite为无限次*/
+ -webkit-animation-direction: alternate;/*定义动画方式*/
+}
+</style>
+</head>
+<body>
+  <div class="touch"></div>
+  <div class="long-tap"></div>
+<script>
+	(function() {
+		var 
+		    oDiv = document.querySelector(".touch"),
+		    oDiv2 = document.querySelector(".long-tap"),
+		    clientX = clientY = start = 0;
+		// document.addEventListener('touchstart',function(e){
+		// 	e.preventDefault();
+  //           var touch = e.touches[0];
+  //           oDiv.style.display = "block";
+  //           clientX = touch.clientX;
+  //           clientY = touch.clientY;
+  //           oDiv.style.transform = "translate("+clientX+"px,"+clientY+"px)";
+		// },false)
+		// document.addEventListener('touchmove',function(e){
+		// 	var touch = e.touches[0];
+		// 	var x = touch.clientX;
+		// 	var y = touch.clientY;
+		// 	oDiv.style.display = "block";
+		// 	oDiv.style.webkitTransform = "translate("+x+"px,"+y+"px)";
+		// },false)
+		// document.addEventListener('touchend',function(){
+		// 	oDiv.style.display = "none";
+		// },false)
+	  oDiv2.addEventListener('touchstart',function(e){
+          e.preventDefault();
+	  	  var start = +new Date;
+	  	  while(start){
+             if(+new Date - start > 1500){
+             	// this.style.background = "black";
+             	this.className = "long-tap demo1";
+             	break;
+             }
+	  	  }
+	  },false)
+	  oDiv2.addEventListener('touchend',function(e){
+         e.preventDefault();
+         this.className = "long-tap";
+	  },false)
+	  oDiv2.addEventListener('touchmove',function(e){
+	  	e.preventDefault();
+	  	var touch = e.touches[0];
+	  	var clientX = 
+	  },false);
+	})();
+</script>
+</body>
+</html>

@@ -12,5 +12,6 @@
 * game -> H5 mobile game
 * gallery -> zepto/js mobile gallery
 * fullpage -> three fullpage examples
+* ebx -> Examples of a mobile terminal project
 
 

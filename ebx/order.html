@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta name="format-detection" content="telephone=no">
+<meta content="320" name="MobileOptimized">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name=description content=e帮鞋>
+<meta name=keywords content=e帮鞋>
+<title>e帮鞋-修鞋</title>
+<link rel="shortcut icon" href="images/logo_50_50png.png"/>
+<link rel=stylesheet href="css/style.css">
+<link rel=stylesheet href="css/order.css">
+</head>
+<body>
+	<div class="wrap">
+		<header id="header" class="bg" style="position:relative;"><div class="city"><a target="_self" href="list.html"><h6>< 返回</h6></a></div>填写订单信息</header>
+		<div class="main">
+			<form action="#" method="POST" id="forms" autocomplete="off">
+				<input type="hidden" name="keyword" id="keyword" value="project_xiu">
+				<div class="H-intro">
+					<a href="order-detail.html" class="H-cont">共10件，合计102元</a>
+					<span class="H-go"></span>
+				</div>
+				<div class="H-dlbox">
+					<dl class="H-dlList">
+					   <dt><span class="H-place1"></span></dt>
+					   <dd><input name="order_time" value="" placeholder="选择服务时间" id="svctime" readonly="true"><i></i></dd>
+					</dl>
+					<dl class="H-dlList">
+					   <dt><span class="H-place2"></span></dt>
+					   <dd><input name="order_address" value="" placeholder="填写你的地址" id="place"></dd>
+					</dl>
+                    <dl class="H-dlList">
+                       <dt><span class="H-place4"></span></dt>
+                       <dd><input name="order_address" value="" placeholder="填写你的电话" id="number"></dd>
+                    </dl>
+					<dl class="H-dlList">
+					   <dt><span class="H-place3"></span></dt>
+					   <dd><input name="order_remark" value="" placeholder="填写更多要求" id="order_remark"></dd>
+					</dl>
+				</div>
+				<div class="H-submit">
+					<input type="hidden" name="keyword" value="project_xiu">
+					<input type="submit" class="reserBtn px34 bg" value="提交订单">
+				</div>
+			</form>
+		</div>
+	</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/mobiscroll.zepto.js"></script>
+<script src="js/mobiscroll.core.js"></script>
+<script src="js/mobiscroll.scroller.js" defer></script>
+<script src="js/mobiscroll.datetime.js" defer></script>
+<script src="js/mobiscroll.scroller.android-ics.js" defer></script>
+<script src="js/mobiscroll.i18n.zh.js" defer></script>
+<link href="css/mobiscroll.scroller.css" rel="stylesheet" type="text/css">
+<link href="css/mobiscroll.scroller.android-ics.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+	(function(a) {
+    var b = {weekText: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],daysCount: 15,};
+    a.mobiscroll.presets.datehour = function(p) {
+        var v = a.extend({}, p.settings), x = a.extend(p.settings, b, v), t = a(this);
+        var l = new Date();
+        var o = [];
+        var e = {label: "日期",keys: [],values: [],};
+        var w = {label: "时间",keys: [],values: [],};
+        for (var k = 0; k < x.daysCount; k++) {
+            var j = l.valueOf();
+            j = j + k * 24 * 60 * 60 * 1000;
+            j = new Date(j);
+            var u = j.getFullYear();
+            var g = j.getMonth() + 1;
+            var r = j.getDate();
+            var f = g + "月" + r + "日&nbsp;" + x.weekText[j.getDay()];
+            if (g <= 9) {
+                g = "0" + g
+            }
+            if (r <= 9) {
+                r = "0" + r
+            }
+            var q = u + "-" + g + "-" + r;
+            e.keys.push(q);
+            if (k == 0) {
+                f = "今天"
+            } else {
+                if (k == 1) {
+                    f = "明天"
+                }
+            }
+            e.values.push(f)
+        }
+        for (var n = 0; n <= 23; n++) {
+            if (n <= 9) {
+                n = "0" + n
+            }
+            w.keys.push(n + ":00",n+":30");
+        }
+        for(var i = 0; i<w.keys.length; i++){
+            w.values.push(w.keys[i])
+        }        
+        var c = [];
+        c.push(e);
+        c.push(w);
+        o.push(c);
+        return {wheels: o,parseValue: function(I, D) {
+                var B = new RegExp(/[0-9]{4}-[0-9]{2}-[0-9]{2}[" "]{1}[0-9]{2}[:]{1}[0-9]{2}/);
+                if (I == null || I == "" || !B.test(I)) {
+                    var H = new Date();
+                    var C = H.getHours();
+                    var s = H.getMinutes();
+                    if (C >= 0 && C < 8 || (C == 8 && s == 0)) {
+                        C = 10
+                    } else {
+                        if (C >= 8 && C < 17 || (C == 17 && s == 0)) {
+                            if (s == 0) {
+                                C = C + 2
+                            } else {
+                                C = C + 3
+                            }
+                        } else {
+                            H = H.valueOf();
+                            H = H + 24 * 60 * 60 * 1000;
+                            H = new Date(H);
+                            C = 10
+                        }
+                    }
+                    if (C > 19) {
+                        C = 19
+                    }
+                    var G = H.getFullYear();
+                    var z = H.getMonth() + 1;
+                    var F = H.getDate();
+                    z = z <= 9 ? "0" + z : z;
+                    F = F <= 9 ? "0" + F : F;
+                    C = C <= 9 ? "0" + C : C;
+                    I = G + "-" + z + "-" + F + " " + C + ":00";
+                }
+                var h = I.split(" "), E = [], A = 0, J;
+                a.each(D.settings.wheels, function(i, d) {
+                    a.each(d, function(y, m) {
+                        m = m.values ? m : convert(m);
+                        J = m.keys || m.values;
+                        if (a.inArray(h[A], J) !== -1) {
+                            E.push(h[A])
+                        } else {
+                            E.push(J[0])
+                        }
+                        A++
+                    })
+                });
+                return E
+            },validate: function(C, I) {
+                var N = new Date();
+                var s = N.getHours();
+                var h = N.getMinutes();
+                if (s >= 0 && s < 8 || (s == 8 && h == 0)) {
+                    s = 10
+                } else {
+                    if (s >= 8 && s < 17 || (s == 17 && h == 0)) {
+                        if (h == 0) {
+                            s = s + 2
+                        } else {
+                            s = s + 2
+                        }
+                    } else {
+                        N = N.valueOf();
+                        N = N + 24 * 60 * 60 * 1000;
+                        N = new Date(N);
+                        s = 8
+                    }
+                }
+                if (s > 19) {
+                    s = 19
+                }
+                var B = N.getFullYear();
+                var G = N.getMonth() + 1;
+                var K = N.getDate();
+                G = G <= 9 ? "0" + G : G;
+                K = K <= 9 ? "0" + K : K;
+                s = s <= 9 ? "0" + s : s;
+                var E = B + "-" + G + "-" + K;
+                var L = a(".dw-ul", C).eq(0);
+                var D = a(".dw-ul", C).eq(1);
+                var O = a(".dw-li", L).index(a('.dw-li[data-val="' + E + '"]', L)), M = a(".dw-li", L).size();
+                a(".dw-li", L).removeClass("dw-v").slice(O, M).addClass("dw-v");
+                var A = s + ":00", z = "18:00";
+                var J = p.temp;
+                if (J[0] != E) {
+                    A = "08:00"
+                } else {
+                    if (N.getHours() > 20 || (N.getHours() == 20 && h > 0)) {
+                        A = "10:00"
+                    }
+                }
+                var H = a(".dw-li", D).index(a('.dw-li[data-val="' + A + '"]', D)), F = a(".dw-li", D).index(a('.dw-li[data-val="' + z + '"]', D));
+                a(".dw-li", D).removeClass("dw-v").slice(H, F + 1).addClass("dw-v")
+            },}
+    };
+    a.mobiscroll.presetShort("datehour")
+})(jQuery);
+$(function () {
+		var dateScroll = function(){
+			var date = new Date();
+			var curr = new Date().getFullYear(),
+				d = date.getDate(),
+				m = date.getMonth();
+			$('#svctime').scroller('destroy').scroller({
+				preset: 'datehour',
+				minDate: new Date(curr, m, d, 8, 00),
+				maxDate: new Date(curr, m, d+7),
+				invalid: [{ d: new Date(), start: '00:00', end: (date.getHours()+2)+':'+date.getMinutes() }],
+				theme: "android-ics light",
+				mode: "scroller",
+				lang: 'zh',
+				display:"bottom",
+				animate: "slideup",
+				stepMinute: 30,
+				dateOrder: 'MMDdd',
+				timeWheels: 'HHii',
+				rows:3
+			});
+		}
+		dateScroll();//时间选择控件
+        var localdata = window.localStorage;
+        $('#place').val(localdata.getItem("fdata_place"));
+        $('#svctime').val(localdata.getItem("fdata_svctime"));
+        $("#order_remark").val(localdata.getItem("fdata_remark"));
+
+		//表单提交验证
+		$('#forms').submit(function(){
+			var place_val = $('#place').val(),
+				svctime_val = $('#svctime').val(),
+				keyword = $("#keyword").val(),
+                order_remark = $("#order_remark").val();
+			if(!svctime_val){
+				alert('请选择服务时间！');
+				return false;
+			}
+			if(!place_val){
+				alert('请填你的地址！');
+				return false;
+			}
+            localdata.setItem("fdata_place",place_val);
+            localdata.setItem("fdata_svctime",svctime_val);
+            localdata.setItem("fdata_remark",order_remark);
+			return true;
+		});
+      var Hcont = $(".H-cont"),
+          data = JSON.parse(localStorage.getItem("data"));
+          if(data){
+              Hcont.html("共"+data.clickCount+"件，合计"+data.allTotal+"元");
+          }
+	});
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "//hm.baidu.com/hm.js?c47a84206681693e534ee69cbd180f19";
+var s = document.getElementsByTagName("script")[0]; 
+s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+@charset "utf-8";
+body{font-size:14px;background:#F2F2F2;color:#555;font-family:"Helvetica","微软雅黑","宋体";}
+.order-container{position:relative;padding:0 10px;margin-bottom:10px;background:#fff;}
+.order-container h5{border-bottom:1px dotted #e5e5e5;height:45px;line-height:45px;}
+.item{border-bottom:1px dotted #e5e5e5;}
+.item li{height:40px;line-height:40px;position:relative;}
+.order-title{width:70%;float:left;position:relative;}
+.order-total{width:20%;text-align:right;float:right;}
+.order-count{width:10%;float:right;}
+.H-submit{margin:.2rem;height:.88rem;border-radius:.08rem;background-clip:padding-box;}
+.reserBtn{width:100%;height:100%;display:block;color:#fff;-webkit-box-pack:center;border:none;border-radius:.08rem;}

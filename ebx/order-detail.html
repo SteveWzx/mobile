@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta name="format-detection" content="telephone=no">
+<meta content="320" name="MobileOptimized">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name=description content=e帮鞋>
+<meta name=keywords content=e帮鞋>
+<title>e帮鞋-订单详情</title>
+<link rel="shortcut icon" href="images/logo_50_50png.png"/>
+<link rel=stylesheet href="css/style.css">
+<link rel=stylesheet href="css/order-detail.css">
+</head>
+<body>
+<div class="wrap">
+<header id="header" class="bg" style="position:relative;"><div class="city"><a target="_self" href="order.html"><h6>< 返回</h6></a></div>订单详情</header>
+<div id="wrapper">
+  <div id="scroller">
+     <div class="order-container">
+        <div>
+          <h5>订单详情</h5>
+        </div>
+     </div>
+     <div class="H-submit">
+       <input type="submit" class="reserBtn px34 bg" value="清空重选">
+     </div>
+  </div>
+</div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script>
+$(function(){
+  var 
+     data = JSON.parse(localStorage.getItem("data")),
+     orderContainer = $(".order-container"),
+     orderList = data.orderList,
+     order = null,
+     i = 0,len = orderList.length,
+     getType = function(type){
+         switch(type){
+          case 0 :return '光面';
+          case 1 :return '网面';
+          case 2 :return '翻毛';
+          case 3 :return '磨砂';}
+       };
+    for(;i<len;i++){
+        order = orderList[i];
+        if(!order.count) continue;
+       orderContainer.append('<ul class="item"><li><div class="order-title">'+getType(order.type)+'</div><div class="order-total">￥'+order.total+'</div><div class="order-count">'+order.count+'件</div></li></ul>');
+    }
+    orderContainer.append('<ul class="item"><li><div class="order-title">运费</div><div class="order-total">￥0</div></li></ul><ul class="item"><li><div class="order-title">合计</div><div class="order-total">￥'+data.allTotal+'</div><div class="order-count">'+data.clickCount+'件</div></li></ul>');
+    $('.reserBtn').on("click",function(){
+       localStorage.setItem("data",'{"allTotal":0,"clickCount":0,"orderList":[{"type":0,"count":0,"total":0}]}');
+       location.href = "list.html";
+    });
+    $('.reserBtn').on("touchstart",function(){
+       localStorage.setItem("data",'{"allTotal":0,"clickCount":0,"orderList":[{"type":0,"count":0,"total":0}]}');
+       location.href = "list.html";
+    })
+})
+var _hmt = _hmt || [];
+(function() {
+var hm = document.createElement("script");
+hm.src = "//hm.baidu.com/hm.js?c47a84206681693e534ee69cbd180f19";
+var s = document.getElementsByTagName("script")[0]; 
+s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

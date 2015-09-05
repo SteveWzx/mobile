@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>测试</title>
+</head>
+<body>
+<div class="container">
+	<div class="one"></div>
+	<div class="two">0</div>
+	<div class="three"></div>
+  hah
+</div>
+<div class="order-detail">
+<div></div>
+<ul>
+    <li>
+        <div>布面网面旅游鞋清洗</div>
+        <div>￥40</div>
+        <div>4件</div>
+    </li>
+    <li>
+        <div>被子毛毯</div>
+        <div>￥79</div>
+        <div>1件</div>
+    </li>
+</ul>
+<ul>
+    <li>
+        <div>运费</div>
+        <div>￥0</div>
+    </li>
+</ul>
+<ul>
+    <li>
+        <div>合计</div>
+        <div>￥89</div>
+        <div>5件</div>
+    </li>
+</ul>
+</div>
+<header id="header" class="bg" style="position:relative;">
+            <div class="city"><a target="_self" href="index.html"><h6>< 返回</h6></a></div>光面
+        </header>
+
+
+      <ul class="item"> <li> <div class="order-title">布面网面旅游鞋清洗</div> <div class="order-total">￥20</div> <div class="order-count">2件</div> </li> </ul> <script>
+
+       // var container = document.querySelector("#header");
+  // alert(container.nodeName);
+  // function getText(dom){
+  //   var 
+  //       text = '',
+  //       firstChild = dom.firstChild;
+  //   while(firstChild){
+  //     if(firstChild.nodeType === 3 && firstChild.nodeValue.trim()!==''){
+  //         text += firstChild.nodeValue;
+  //     }
+  //     firstChild = firstChild.nextSibling;
+  //   }
+  //   return text;
+  // }
+  // alert(getText(container));
+/**
+*
+* 存入本地存储中的数据格式为：
+*  
+* {
+    total:220,     //所有类型的总价格
+    clickCount:14, //所有类型的鞋子总数，即footer中的圆圈数
+    orderList:     //一种鞋子的集合既是一个order，此为order的集合
+    [
+      {
+        type:TYPE_G, //鞋子属于那种类型 0为光面、1为网面、2为翻毛、3位磨砂
+        count:20, //该类型的个数，20双光面鞋子
+        total:300 //此order多少钱？ 20双光面鞋子 X 单价 ---> 20 x 15 = 300
+      },
+      {
+        type:2
+        count:2,
+        total:40
+      }
+    ]
+  }
+*
+  要更新的是：点击 + 号、- 号 要实时更新本地存储
+  index:type,count:tab,curValue:currentValue,clickCount:footer  
+*/
+function save (type,count) {
+   type = +type || 0;
+   count = +count || 0;
+   var 
+     data = JSON.parse(localStorage.getItem("data")),
+     total = allTotal = clickCount = i = len = val = 0,
+     orderList = order = newOrder = null,
+     isInOrderList = false,
+     getVal = function(type){//根据不同的类型返回不同的单价
+       switch(type){
+        case 0 :return 10;
+        case 1 :return 15;
+        case 2 :return 20;
+        case 3 :return 25;}
+     },
+     getTotal = function(type,count){ //根据不同类型的鞋子数x单价 得出同类鞋子集合的总价
+       val = getVal(type);
+       switch(type){
+        case 0 :return count*val;
+        case 1 :return count*val;
+        case 2 :return count*val;
+        case 3 :return count*val;}
+     };
+   if(data){
+     orderList = data.orderList; //不同类型鞋子的集合
+     for(len = orderList.length;i<len;i++){ //循环结合
+       order = orderList[i];
+       if(order.type === type){ // 若本次要存储的存在于本地存储，则更新订单中的count、total
+          order.count = count;
+          order.total = getTotal(type,count);
+          isInOrderList = true;
+       }
+     }
+     if(!isInOrderList){//若本次要存储的不存在，则push新订单
+       newOrder = {
+                    "type":type,
+                    "count":count,
+                    "total":getTotal(type,count)
+                  }
+       orderList.push(newOrder);
+     }
+     //循环最新的orderList,计算出总价与总数并更新到对象上
+    for(i = 0,len = orderList.length;i<len;i++){
+      order = orderList[i];
+      allTotal += order.total;
+      clickCount += order.count;
+    }
+    data.allTotal = allTotal;
+    data.clickCount = clickCount;
+   }else{ //若没有本地存储
+     total = allTotal = getTotal(type,count); //因为是第一次存储，所以总价等于集合价
+     data = 
+          {
+            "allTotal":allTotal,
+            "clickCount":clickCount,
+            "orderList":
+            [
+              {
+                "type":type,
+                "count":count,
+                "total":total
+              }
+            ]
+          };
+   }
+   localStorage.setItem("data",JSON.stringify(data)); //更新本地存储
+}
+save(1,10);
+
+
+
+
+var startX = 0;
+               document.addEventListener('touchstart',function(e){
+                   e.preventDefault();
+                   var touch = e.touches[0];
+                   startX = touch.clientX;
+                   console.log("startX:"+startX);
+                   console.log(hash);
+               },false);
+               document.addEventListener('touchmove',function(e){
+                   var touch = e.touches[0];
+                   var xSub = touch.clientX - startX;
+
+                   if(xSub > 20){
+                      // tab(3);
+                      hash++;
+                      tab(hash);
+                   }
+                   if(xSub < -20){
+                      hash--;
+                      tab(hash);
+                   }
+               },false);
+</script>
+</body>
+</html>
