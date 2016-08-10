@@ -1,0 +1,2982 @@
+<!DOCTYPE html>
+<!-- saved from url=(0198)http://photo.kagirl.cn/kphoto/showbook.php?edit=2&bookid=Fpx5HcVlzco01qPcNEzY0xIXiiWogZbC&openid=T_9RB8DEFSgaLoEmYFuIkO1DYXQON-gXO_9DRwIjYrwD6aXB4jtZ5d2o_V7wMLpKYhhRaCVC4SQ&scene=faya&wxid=xuanmeixc -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <script>
+
+        function init_viewport() {
+            if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
+                var version = parseFloat(RegExp.$1);
+
+                if (version > 2.3) {
+                    var phoneScale = parseInt(window.screen.width) / 500;
+                    document.write('<meta name="viewport" content="width=500, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+                }
+                else {
+                    document.write('<meta name="viewport" content="width=500, target-densitydpi=device-dpi">');
+                }
+            }
+            else if (navigator.userAgent.indexOf('iPhone') != -1) {
+                var phoneScale = parseInt(window.screen.width) / 500;
+                document.write('<meta name="viewport" content="width=500, height=750,initial-scale=' + phoneScale + ', user-scalable=no" /> ');         //0.75   0.82
+            }
+            else {
+                document.write('<meta name="viewport" content="width=500, height=750,initial-scale=0.64" /> ');         //0.75   0.82
+
+            }
+        }
+
+        init_viewport();
+
+    </script>
+    <meta name="viewport" content="width=500, height=750,initial-scale=0.828, user-scalable=no">
+
+    <script>
+        document.ontouchmove = function (e) {
+            e.preventDefault();
+        }
+    </script>
+
+    <script src="./photo_files/jweixin-1.0.0.js"></script>
+    <script>
+
+        var module_inits = [];
+
+        wx.config({
+            debug: false,
+            appId: 'wx2d2fd8b8b9efa1ad',
+            timestamp: 10000,
+            nonceStr: 'hellokawa',
+            signature: '60618152cfecb51721af4734857b53830837471d',
+            jsApiList: [
+                'onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareQZone', 'closeWindow', 'hideAllNonBaseMenuItem', 'showMenuItems', 'showAllNonBaseMenuItem']
+        });
+
+        function load_init_modules() {
+            for (var i = 0; i < module_inits.length; i++) {
+                module_inits[i]();
+            }
+        }
+
+        function call_me(fun) {
+            module_inits.push(fun);
+        }
+
+        var ua = navigator.userAgent.toLowerCase();
+
+        if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+            wx.ready(load_init_modules);
+        }
+        else {
+            onload = load_init_modules;
+        }
+
+    </script>
+
+    <script>
+    var slider_images_url = [];
+    slider_images_url.push('http://7xjeju.com2.z0.glb.qiniucdn.com/xa_71366423637');
+    var e_bookid = 'Fpx5HcVlzco01qPcNEzY0xIXiiWogZbC';
+    var e_desc = 'test';
+    var e_openid = null;
+    var e_scene = 'faya';
+    var editmode = false;
+    var wxid = 'xuanmeixc';
+    var shareid = '';
+    var guanzhu_url = 'http://mp.weixin.qq.com/s?__biz=MjM5NTIxNTU0MA==&mid=404321789&idx=1&sn=58011fc5ccb81d194bf814a641b3cfb6#rd';
+    e_openid = 'T_9RB8DEFSgaLoEmYFuIkO1DYXQON-gXO_9DRwIjYrwD6aXB4jtZ5d2o_V7wMLpKYhhRaCVC4SQ';
+    editmode = true;
+    var e_music_url = 'http://7xjeju.com2.z0.glb.qiniucdn.com/music/yeshenfengzhuqiaozhuyun.mp3';</script>
+
+    <style type="text/css">
+
+        * {
+            padding: 0px;
+            margin: 0px;
+            -webkit-box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        #container {
+            width: 500px;
+            height: 815px;
+            position: absolute;
+            overflow: hidden;
+        }
+
+        #container > div, #container > img {
+            position: absolute;
+        }
+
+        #ye1 {
+            left: -42px;
+            top: -48px;
+            -webkit-transform-origin: 25% 0%;
+            -webkit-animation: yezi1 1.5s cubic-bezier(.27, 0, .78, 1) infinite alternate;
+        }
+
+        #ye2 {
+            left: 178px;
+            top: -90px;
+            -webkit-transform-origin: 50% 0%;
+            -webkit-animation: yezi1 1.7s cubic-bezier(.27, 0, .78, 1) infinite alternate;
+        }
+
+        #ye3 {
+            left: 294px;
+            top: -50px;
+            -webkit-transform-origin: 50% 0%;
+            -webkit-animation: yezi1 1.5s cubic-bezier(.27, 0, .78, 1) infinite alternate;
+        }
+
+        #ye4 {
+            -webkit-transform: scale(-1, 1);
+            -webkit-transform-origin: 25% 0%;
+            left: 451px;
+            top: -59px;
+            -webkit-animation: yezi2 1.8s cubic-bezier(.27, 0, .78, 1) infinite alternate;
+        }
+
+        #ye5 {
+            left: -11px;
+            top: -50px;
+            -webkit-transform-origin: 50% 0%;
+            -webkit-animation: yezi1 2s cubic-bezier(.27, 0, .78, 1) infinite alternate;
+        }
+
+        #ya {
+            width: 97px;
+            height: 179px;
+            top: 546px;
+            left: 354px;
+            -webkit-transform-origin: 100% 100%;
+            -webkit-animation: yezi3 4s cubic-bezier(.27, 0, .78, 1) infinite alternate;
+        }
+
+        #ya > img {
+            position: absolute;
+        }
+
+        #shuye1 {
+            left: -54px;
+            top: 29px;
+            -webkit-transform-origin: 96% 10%;
+            -webkit-animation: yezi4 3s linear infinite alternate;
+        }
+
+        #shuye2 {
+            left: 3px;
+            top: -77px;
+            -webkit-transform-origin: 37% 100%;
+            -webkit-animation: yezi1 3s linear infinite alternate;
+        }
+
+        #yedi {
+            left: 0px;
+            top: 680px;
+        }
+
+        #xing1 {
+            left: 453px;
+            top: 705px;
+            -webkit-animation: xing2 3s linear infinite;
+        }
+
+        #xing2 {
+            left: 228px;
+            top: 699px;
+            -webkit-animation: xing3 3s 2s linear infinite;
+        }
+
+        #xing3 {
+            left: 37px;
+            top: 760px;
+            -webkit-animation: xing4 3s 1s linear infinite;
+        }
+
+        #xing4 {
+            left: 373px;
+            top: 568px;
+            -webkit-animation: xing1 3s linear infinite;
+        }
+
+        #wenzi {
+            width: 100px;
+            height: 100px;
+            left: 230px;
+            top: 179px;
+            position: absolute;
+        }
+
+        .chi1 {
+            left: 0px;
+            top: 0px;
+            position: absolute;
+            -webkit-transform-origin: 89% 92%;
+            -webkit-animation: chibang1 0.08s linear infinite alternate;
+
+        }
+
+        .chi2 {
+            left: 5px;
+            top: 0px;
+            position: absolute;
+            -webkit-transform-origin: 89% 92%;
+            -webkit-transform: scale(-1, 1);
+            -webkit-animation: chibang2 0.08s linear infinite alternate;
+
+        }
+
+        .tui1 {
+            left: 18px;
+            top: 29px;
+            position: absolute;
+        }
+
+        .tui2 {
+            left: 30px;
+            top: 29px;
+            position: absolute;
+            -webkit-transform: scale(-1, 1);
+        }
+
+        .yan {
+            left: 19px;
+            top: 22px;
+            position: absolute;
+        }
+
+        .xian {
+            position: absolute;
+            left: 25px;
+            top: 42px;
+        }
+
+        #wenzi1 {
+            position: absolute;
+            left: -100px;
+            top: 400px;
+            -webkit-animation: wenzi1 15s linear infinite;
+        }
+
+        #wenzi1div {
+            -webkit-animation: wenzi1div 15s linear infinite;
+        }
+
+        #wenzi2 {
+            position: absolute;
+            left: 0px;
+            top: 670px;
+            -webkit-animation: wenzi1 18s 3s linear infinite;
+        }
+
+        #wenzi2div {
+            left: 600px;
+            -webkit-animation: wenzi2div 18s 3s linear infinite;;
+        }
+
+        #juxing {
+            left: 209px;
+            -webkit-transform: scale(2.5, -1);
+            top: 243px;
+            opacity: 0.5;
+            position: absolute;
+        }
+
+        #titlemoving {
+            position: absolute;
+            -webkit-animation: titlemoving 1s linear infinite alternate;
+        }
+
+        #div1 {
+            border: 6px solid #fff;
+            width: 460px;
+            height: 300px;
+            position: absolute;
+            left: 20px;
+            top: 220px;
+            overflow: hidden;
+        }
+
+        #div2 {
+            border: 6px solid #fff;
+            width: 380px;
+            height: 600px;
+            position: absolute;
+            top: 100px;
+            left: 60px;
+            overflow: hidden;
+        }
+
+        .divimg {
+            position: absolute;
+            border: 6px solid #fff;
+            overflow: hidden;
+        }
+
+        .divcon {
+            width: 500px;
+            height: 815px;
+            position: absolute;
+            opacity: 0;
+            -webkit-transform-origin: 90% 20%;
+        }
+
+        .wenzi_1 {
+            position: absolute;
+            left: 53px;
+        }
+
+        .wenzi_2 {
+            position: absolute;
+            left: 390px;
+        }
+
+        #div1box {
+            position: absolute;
+            -webkit-animation: div1moving 1.5s ease-in-out infinite alternate;
+        }
+
+        #div2box {
+            position: absolute;
+            -webkit-animation: div2moving 1.5s ease-in-out infinite alternate;
+        }
+
+        #div3box {
+            position: absolute;
+            -webkit-animation: div1moving 1.5s ease-in-out infinite alternate;
+        }
+
+        #div4box {
+            position: absolute;
+            -webkit-animation: div1moving 1.5s ease-in-out infinite alternate;
+        }
+
+        #pagetitle {
+            opacity: 0;
+        }
+    </style>
+    <style type="text/css">
+        @-webkit-keyframes yezi1 {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(3deg);
+            }
+        }
+
+        @-webkit-keyframes yezi2 {
+            from {
+                -webkit-transform: rotate(0deg) scale(-1, 1);
+            }
+            to {
+                -webkit-transform: rotate(-3deg) scale(-1, 1);
+            }
+        }
+
+        @-webkit-keyframes yezi3 {
+            from {
+                -webkit-transform: rotate(0deg) scale(0.7);
+            }
+            to {
+                -webkit-transform: rotate(5deg) scale(0.7);
+            }
+        }
+
+        @-webkit-keyframes yezi4 {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transfrom: rotate(-3deg);
+            }
+        }
+
+        @-webkit-keyframes xing1 {
+            0% {
+                -webkit-transform: rotate(0deg);
+                opacity: 0
+            }
+            30% {
+                -webkit-transform: rotate(60deg);
+                opacity: 1
+            }
+            60% {
+                -webkit-transform: rotate(120deg);
+                opacity: 0
+            }
+            100% {
+                opacity: 0
+            }
+        }
+
+        @-webkit-keyframes xing2 {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate(0px, 0px) rotate(60deg);
+            }
+            30% {
+                opacity: 1;
+                -webkit-transform: translate(0px, -45px) rotate(42deg);
+            }
+            100% {
+                opacity: 0;
+                -webkit-transform: translate(0px, -150px) rotate(0deg);
+            }
+        }
+
+        @-webkit-keyframes xing3 {
+            from {
+                opacity: 1;
+                -webkit-transform: translate(0px, 0px);
+            }
+            to {
+                opacity: 0;
+                -webkit-transform: translate(0px, -100px);
+            }
+        }
+
+        @-webkit-keyframes xing4 {
+            0% {
+                opacity: 0;
+                -webkit-transform: translate(0px, 0px) rotate(-60deg);
+            }
+            30% {
+                opacity: 1;
+                -webkit-transform: translate(0px, -45px) rotate(-42deg);
+            }
+            100% {
+                opacity: 0;
+                -webkit-transform: translate(0px, -150px) rotate(0deg);
+            }
+        }
+
+        @-webkit-keyframes chibang1 {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(-70deg);
+            }
+        }
+
+        @-webkit-keyframes chibang2 {
+            from {
+                -webkit-transform: rotate(0deg) scale(-1, 1);
+            }
+            to {
+                -webkit-transform: rotate(70deg) scale(-1, 1);
+            }
+        }
+
+        @-webkit-keyframes wenzi1 {
+            0% {
+                -webkit-transform: translate(0px, 0px);
+                -webkit-animation-timing-function: ease-out;
+            }
+            35% {
+                -webkit-transform: translate(420px, 0px);
+                -webkit-animation-timing-function: ease-in-out;
+            }
+            65% {
+                -webkit-transform: translate(200px, 0px);
+                -webkit-animation-timing-function: ease-in-out;
+            }
+            100% {
+                -webkit-transform: translate(620px, 0px);
+                -webkit-animation-timing-function: ease-in;
+            }
+        }
+
+        @-webkit-keyframes wenzi1div {
+            0% {
+                -webkit-transform: translate(0px, 0px);
+                -webkit-animation-timing-function: ease-in-out;
+            }
+            50% {
+                -webkit-transform: translate(0px, -150px);
+                -webkit-animation-timing-function: ease-in-out;
+            }
+            100% {
+                -webkit-transform: translate(0px, -300px);
+                -webkit-animation-timing-function: ease-in-out;
+            }
+        }
+
+        @-webkit-keyframes wenzi2div {
+            0% {
+                -webkit-transform: translate(0px, 0px) scale(-1, 1);
+                -webkit-animation-timing-function: ease-in-out;
+            }
+            50% {
+                -webkit-transform: translate(0px, -150px) scale(-1, 1);
+                -webkit-animation-timing-function: ease-in-out;
+            }
+            100% {
+                -webkit-transform: translate(0px, -300px) scale(-1, 1);
+                -webkit-animation-timing-function: ease-in-out;
+            }
+        }
+
+        @-webkit-keyframes titlemoving {
+            from {
+                -webkit-transform: translate(0px, 0px);
+            }
+            to {
+                -webkit-transform: translate(0px, -10px);
+            }
+        }
+
+        @-webkit-keyframes title_in {
+            from {
+                opacity: 0;
+                -webkit-transform: translate(0px, 200px);
+            }
+            to {
+                opacity: 1;
+                -webkit-transform: translate(0px, 0px);
+            }
+        }
+
+        @-webkit-keyframes title_out {
+            from {
+                opacity: 1;
+                -webkit-transform: translate(0px, 0px);
+            }
+            to {
+                opacity: 0;
+                -webkit-transform: translate(0px, -300px);
+            }
+        }
+
+        @-webkit-keyframes div1_in {
+            from {
+                -webkit-transform: translate(-400px, 0px);
+                opacity: 0
+            }
+            to {
+                -webkit-transform: translate(0px, 0px);
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes div1_out {
+            from {
+                -webkit-transform: translate(0px, 0px);
+                opacity: 1
+            }
+            to {
+                -webkit-transform: translate(400px, 0px);
+                opacity: 0
+            }
+        }
+
+        @-webkit-keyframes div1moving {
+            from {
+                -webkit-transform: translate(-5px, 0px);
+            }
+            to {
+                -webkit-transform: translate(5px, 0px);
+            }
+        }
+
+        @-webkit-keyframes div2moving {
+            from {
+                -webkit-transform: translate(0px, -5px);
+            }
+            to {
+                -webkit-transform: translate(0px, 5px);
+            }
+        }
+
+        @-webkit-keyframes div2_in {
+            from {
+                -webkit-transform: translate(0px, 400px);
+                opacity: 0
+            }
+            to {
+                -webkit-transform: translate(0px, 0px);
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes div2_out {
+            from {
+                -webkit-transform: translate(0px, 0px);
+                opacity: 1
+            }
+            to {
+                -webkit-transform: translate(0px, -400px);
+                opacity: 0
+            }
+        }
+
+        @-webkit-keyframes div3_in {
+            from {
+                -webkit-transform: translate(400px, 0px);
+                opacity: 0
+            }
+            to {
+                -webkit-transform: translate(0px, 0px);
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes div3_out {
+            from {
+                -webkit-transform: translate(0px, 0px);
+                opacity: 1
+            }
+            to {
+                -webkit-transform: translate(-400px, 0px);
+                opacity: 0
+            }
+        }
+
+        @-webkit-keyframes div4_in {
+            from {
+                -webkit-transform: scale(0.3);
+                opacity: 0
+            }
+            to {
+                -webkit-transform: scale(1);
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes div4_out {
+            from {
+                -webkit-transform: translate(0px, 0px) scale(1);
+                opacity: 1
+            }
+            to {
+                -webkit-transform: translate(-400px, 400px) scale(1);
+                opacity: 0
+            }
+        }
+    </style>
+
+    <title>test</title>
+</head>
+<body>
+<div id="container">
+    <img src="./photo_files/bg.jpg">
+
+    <img id="ye3" src="./photo_files/ye03.png">
+    <img id="ye5" src="./photo_files/ye03.png">
+    <img id="ye2" src="./photo_files/ye02.png">
+    <img id="ye1" src="./photo_files/ye01.png">
+    <img id="ye4" src="./photo_files/ye01.png">
+
+
+    <div id="pagetitle" style="animation: title_out 2.5s ease-in both;">
+        <div id="titlemoving">
+            <img id="juxing" src="./photo_files/juxing.png">
+
+            <div style="position: absolute;width: 212px;height: 238px;top: 262px;left: 149px;overflow: hidden;">
+                <div style="position:absolute;width:212px;height:238px;top:0px;left:0px;overflow:hidden;">
+                    <div style="position:absolute;width:212px;height:238px;display:table;overflow:hidden;">
+                        <div id="titlecontent"
+                             style="width:212px;height:238px;vertical-align:middle;display:table-cell;text-align:center;font-size:32px;line-height:45px;color:#3F6E08;font-weight:bold;">
+                            test
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="wenzi">
+                <img src="./photo_files/chi.png" class="chi1">
+                <img src="./photo_files/chi.png" class="chi2">
+                <img src="./photo_files/yan.png" class="yan">
+                <img src="./photo_files/tui.png" class="tui1">
+                <img src="./photo_files/tui.png" class="tui2">
+                <img src="./photo_files/xian.png" class="xian">
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="div1box">
+        <div id="div1con" class="divcon" style="animation: div1_out 1.5s ease-in both;">
+            <div id="div1" class="divimg" style="width: 380px; height: 513.08px; left: 60px; top: 100px;">
+                <img id="img1" style="position: absolute; width: 380px; height: 513.08px; left: 0px; top: 0px;"
+                     src="./photo_files/xa_71366423637">
+            </div>
+            <div id="wenzi1_1" class="wenzi_1" style="top: 38px;">
+                <img src="./photo_files/chi.png" class="chi1">
+                <img src="./photo_files/chi.png" class="chi2">
+                <img src="./photo_files/yan.png" class="yan">
+                <img src="./photo_files/tui.png" class="tui1">
+                <img src="./photo_files/tui.png" class="tui2">
+                <img src="./photo_files/xian.png" class="xian">
+            </div>
+            <div id="wenzi1_2" class="wenzi_2" style="top: 38px;">
+                <img src="./photo_files/chi.png" class="chi1">
+                <img src="./photo_files/chi.png" class="chi2">
+                <img src="./photo_files/yan.png" class="yan">
+                <img src="./photo_files/tui.png" class="tui1">
+                <img src="./photo_files/tui.png" class="tui2">
+                <img src="./photo_files/xian.png" class="xian">
+            </div>
+        </div>
+    </div>
+
+    <div id="div2box">
+        <div id="div2con" class="divcon" style="animation: div2_in 2s ease-out 1s both;">
+            <div id="div2" class="divimg" style="width: 380px; height: 513.08px; left: 60px; top: 100px;">
+                <img id="img2" style="position: absolute; width: 380px; height: 513.08px; left: 0px; top: 0px;"
+                     src="./photo_files/xa_71366423637">
+            </div>
+            <div id="wenzi2_1" class="wenzi_1" style="top: 38px;">
+                <img src="./photo_files/chi.png" class="chi1">
+                <img src="./photo_files/chi.png" class="chi2">
+                <img src="./photo_files/yan.png" class="yan">
+                <img src="./photo_files/tui.png" class="tui1">
+                <img src="./photo_files/tui.png" class="tui2">
+                <img src="./photo_files/xian.png" class="xian">
+            </div>
+            <div id="wenzi2_2" class="wenzi_2" style="top: 38px;">
+                <img src="./photo_files/chi.png" class="chi1">
+                <img src="./photo_files/chi.png" class="chi2">
+                <img src="./photo_files/yan.png" class="yan">
+                <img src="./photo_files/tui.png" class="tui1">
+                <img src="./photo_files/tui.png" class="tui2">
+                <img src="./photo_files/xian.png" class="xian">
+            </div>
+        </div>
+    </div>
+
+    <div id="div3box">
+        <div id="div3con" class="divcon" style="animation: div3_out 1.5s ease-in both;">
+            <div id="div3" class="divimg" style="width: 380px; height: 513.08px; left: 60px; top: 100px;">
+                <img id="img3" style="position: absolute; width: 380px; height: 513.08px; left: 0px; top: 0px;"
+                     src="./photo_files/xa_71366423637">
+            </div>
+            <div id="wenzi3_1" class="wenzi_1" style="top: 38px;">
+                <img src="./photo_files/chi.png" class="chi1">
+                <img src="./photo_files/chi.png" class="chi2">
+                <img src="./photo_files/yan.png" class="yan">
+                <img src="./photo_files/tui.png" class="tui1">
+                <img src="./photo_files/tui.png" class="tui2">
+                <img src="./photo_files/xian.png" class="xian">
+            </div>
+            <div id="wenzi3_2" class="wenzi_2" style="top: 38px;">
+                <img src="./photo_files/chi.png" class="chi1">
+                <img src="./photo_files/chi.png" class="chi2">
+                <img src="./photo_files/yan.png" class="yan">
+                <img src="./photo_files/tui.png" class="tui1">
+                <img src="./photo_files/tui.png" class="tui2">
+                <img src="./photo_files/xian.png" class="xian">
+            </div>
+        </div>
+    </div>
+
+    <div id="div4box">
+        <div id="div4con" class="divcon" style="animation: div4_out 1.5s ease-in both;">
+            <div id="div4" class="divimg" style="width: 380px; height: 513.08px; left: 60px; top: 100px;">
+                <img id="img4" style="position: absolute; width: 380px; height: 513.08px; left: 0px; top: 0px;"
+                     src="./photo_files/xa_71366423637">
+            </div>
+            <div id="wenzi4_1" class="wenzi_1" style="top: 38px;">
+                <img src="./photo_files/chi.png" class="chi1">
+                <img src="./photo_files/chi.png" class="chi2">
+                <img src="./photo_files/yan.png" class="yan">
+                <img src="./photo_files/tui.png" class="tui1">
+                <img src="./photo_files/tui.png" class="tui2">
+                <img src="./photo_files/xian.png" class="xian">
+            </div>
+            <div id="wenzi4_2" class="wenzi_2" style="top: 38px;">
+                <img src="./photo_files/chi.png" class="chi1">
+                <img src="./photo_files/chi.png" class="chi2">
+                <img src="./photo_files/yan.png" class="yan">
+                <img src="./photo_files/tui.png" class="tui1">
+                <img src="./photo_files/tui.png" class="tui2">
+                <img src="./photo_files/xian.png" class="xian">
+            </div>
+        </div>
+    </div>
+
+    <div id="wenzi1div">
+        <div id="wenzi1">
+            <img src="./photo_files/chi.png" class="chi1">
+            <img src="./photo_files/chi.png" class="chi2">
+            <img src="./photo_files/yan.png" class="yan">
+        </div>
+    </div>
+
+
+    <div id="wenzi2div">
+        <div id="wenzi2">
+            <img src="./photo_files/chi.png" class="chi1">
+            <img src="./photo_files/chi.png" class="chi2">
+            <img src="./photo_files/yan.png" class="yan">
+        </div>
+    </div>
+
+    <div id="ya">
+        <img src="./photo_files/jing01.png">
+        <img id="shuye1" src="./photo_files/ye05.png">
+        <img id="shuye2" src="./photo_files/ye06.png">
+    </div>
+
+    <img id="xing2" src="./photo_files/xingmang.png">
+    <img id="xing3" src="./photo_files/xingmang.png">
+    <img id="yedi" src="./photo_files/yedi.png">
+
+    <img id="xing1" src="./photo_files/xingmang.png">
+    <img id="xing4" src="./photo_files/xingmang.png">
+
+</div>
+<script>
+
+    function id(name) {
+        return document.getElementById(name)
+    }
+
+    function showtitle() {
+        id('pagetitle').style.webkitAnimation = 'title_in 1.5s ease-out both';
+        id('titlecontent').innerHTML = e_desc;
+    }
+
+    function distitle() {
+        id('pagetitle').style.webkitAnimation = 'title_out 2.5s ease-in both';
+
+        setTimeout(show1, 2000)
+    }
+
+    function show1() {
+        setImageindex();
+        set_items_position('1');
+
+        id('div1con').style.webkitAnimation = 'div1_in 2s ease-out both';
+
+        setTimeout(show2, 6000)
+    }
+
+    function show2() {
+        setImageindex();
+        set_items_position('2');
+
+        id('div1con').style.webkitAnimation = 'div1_out 1.5s ease-in both'
+        id('div2con').style.webkitAnimation = 'div2_in 2s ease-out 1s both';
+
+        setTimeout(show3, 6000)
+    }
+
+    function show3() {
+        setImageindex();
+        set_items_position('3');
+
+        id('div2con').style.webkitAnimation = 'div2_out 1.5s ease-in both'
+        id('div3con').style.webkitAnimation = 'div3_in 2s ease-out 1s both';
+
+        setTimeout(show4, 6000)
+    }
+
+    function show4() {
+        setImageindex();
+        set_items_position('4');
+
+        id('div3con').style.webkitAnimation = 'div3_out 1.5s ease-in both'
+        id('div4con').style.webkitAnimation = 'div4_in 2s ease-out 1s both';
+
+        setTimeout(show1_1, 6000)
+
+    }
+
+    function show1_1() {
+        setImageindex();
+        set_items_position('1');
+
+        id('div4con').style.webkitAnimation = 'div4_out 1.5s ease-in both'
+        id('div1con').style.webkitAnimation = 'div1_in 2s ease-out 1s both';
+
+        setTimeout(show2, 6000)
+    }
+
+    function set_items_position(pageid) {
+        var img_bili = image_size_width[image_url_index] / image_size_height[image_url_index];
+
+        console.log(img_bili);
+        var div = id('div' + pageid);
+        var img = id('img' + pageid);
+
+        img.src = Onload_imgs_url[image_url_index];
+
+        if (img_bili >= 1) {
+            id('wenzi' + pageid + '_1').style.top = '158px';
+            id('wenzi' + pageid + '_2').style.top = '158px';
+
+
+            div.style.width = '460px';
+            if (img_bili > (460 / 300)) {
+                div.style.height = '300px';
+
+                img.style.height = '300px';
+                img.style.width = 300 * img_bili + 'px';
+                img.style.left = (460 - 300 * img_bili) / 2 + 'px';
+                img.style.top = '0px';
+            }
+            else {
+                div.style.height = 460 / img_bili + 'px';
+
+                img.style.width = '460px';
+                img.style.height = 460 / img_bili + 'px';
+                img.style.left = '0px';
+                img.style.top = '0px';
+            }
+
+            div.style.left = '20px';
+            div.style.top = '220px';
+
+        }
+        else {
+            id('wenzi' + pageid + '_1').style.top = '38px';
+            id('wenzi' + pageid + '_2').style.top = '38px';
+
+            div.style.width = '380px';
+            if (img_bili < (380 / 600)) {
+                div.style.height = '600px';
+
+                img.style.width = '380px';
+                img.style.height = 380 / img_bili + 'px';
+                img.style.left = '0px';
+                img.style.top = (600 - 380 / img_bili) / 2 + 'px';
+            }
+            else {
+                div.style.height = 380 / img_bili + 'px';
+
+                img.style.width = '380px';
+                img.style.height = 380 / img_bili + 'px';
+                img.style.left = '0px';
+                img.style.top = '0px';
+            }
+
+            div.style.left = '60px';
+            div.style.top = '100px';
+        }
+
+        image_url_index++;
+
+    }
+
+    call_me(load_images);
+    var image_size_width = [];
+    var image_size_height = [];
+    var image_url_index = 0;
+    var have_num = 0;
+    var error_num = 0;
+    var canshow = true;
+    var reshow = false;
+    var delaytime = 5500;
+
+    function load_images() {
+        reshow = false;
+        image_size_width = [];
+        image_size_height = [];
+        Onload_imgs_url = [];
+        image_url_index = 0;
+        have_num = 0;
+        error_num = 0;
+        begin_titletime = new Date();
+        begin_titletime = begin_titletime.getTime();
+        canshow = true;
+        showtitle();
+        for (var i = 0; i < slider_images_url.length; i++) {
+            var img = new Image();
+            img.index = i;
+            img.src = slider_images_url[i];
+            img.onload = image_onload;
+            img.onerror = image_onerror;
+            Onload_imgs_url[i] = 'loading';
+        }
+    }
+
+    function image_onerror(event) {
+        var img = event.target;
+        var index = img.index;
+        if (index < 10)
+            error_num++;
+        Onload_imgs_url[index] = 'not find';
+        console.log(Onload_imgs_url[index]);
+        console.log(have_num + '-' + error_num);
+        if ((have_num + error_num >= 10 || slider_images_url.length == (have_num + error_num)) && canshow == true) {
+            reshow = false;
+            canshow = false;
+            if (have_num == 0)
+                return;
+            var end_titletime = new Date();
+            end_titletime = end_titletime.getTime();
+            var dis_titletime = Math.abs(end_titletime - begin_titletime);
+            if (dis_titletime > delaytime) {
+                distitle();
+            }
+            else {
+                dis_titletime = delaytime - dis_titletime;
+                timeout0 = setTimeout(function () {
+                    distitle();
+                }, dis_titletime);
+            }
+        }
+    }
+
+    function image_onload(event) {
+        if (reshow == true)
+            return;
+
+        var img = event.target;
+        var index = img.index;
+
+        if (index < 10) {
+            have_num++;
+        }
+        Onload_imgs_url[index] = img.src;
+        image_size_height[index] = img.height;
+        image_size_width[index] = img.width;
+
+        console.log(Onload_imgs_url[index]);
+        console.log(have_num + '-' + error_num);
+
+        if ((have_num + error_num >= 10 || slider_images_url.length == (have_num + error_num)) && canshow == true) {
+            reshow = false;
+            canshow = false;
+            if (have_num == 0)
+                return;
+            var end_titletime = new Date();
+            end_titletime = end_titletime.getTime();
+            var dis_titletime = Math.abs(end_titletime - begin_titletime);
+            if (dis_titletime > delaytime) {
+                distitle();
+            }
+            else {
+                dis_titletime = delaytime - dis_titletime;
+                timeout0 = setTimeout(function () {
+                    distitle();
+                }, dis_titletime);
+            }
+
+        }
+
+    }
+    function setImageindex() {
+        if (image_url_index == Onload_imgs_url.length)
+            image_url_index = 0;
+
+        while (Onload_imgs_url[image_url_index] == 'not find' || Onload_imgs_url[image_url_index] == 'loading') {
+            console.log(Onload_imgs_url[image_url_index]);
+            image_url_index++;
+            if (image_url_index == Onload_imgs_url.length)
+                image_url_index = 0;
+        }
+    }
+</script>
+<link type="text/css" rel="stylesheet" href="./photo_files/guanzhu.css">
+<link rel="stylesheet" type="text/css" href="./photo_files/buttons.css">
+<meta name="copyright" content="我司的相册模板为版权所有，请停止抄袭，否则将按照侵权起诉！">
+<style type="text/css">
+    @-webkit-keyframes zhuan {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @-webkit-keyframes aa_out_bounce_left {
+        0% {
+            -webkit-transform: translateX(0)
+        }
+        20% {
+            -webkit-transform: translateX(20px)
+        }
+        100% {
+            -webkit-transform: translateX(-125px)
+        }
+    }
+
+    @-webkit-keyframes aa_in_bounce_center {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(.3)
+        }
+        50% {
+            opacity: 1;
+            -webkit-transform: scale(1.05)
+        }
+        70% {
+            -webkit-transform: scale(.9)
+        }
+        100% {
+            -webkit-transform: scale(1)
+        }
+    }
+
+    @-webkit-keyframes jinbi {
+        from {
+            -webkit-transform: rotateY(0deg);
+        }
+        to {
+            -webkit-transform: rotateY(180deg);
+        }
+    }
+
+    .jubao-item {
+        position: relative;
+        float: left;
+        width: 360px;
+        height: 55px;
+        top: 0px;
+        font-size: 20px;
+        line-height: 55px;
+        margin-left: 20px;
+        border-bottom: 1px solid #EBEBEB;
+    }
+
+    .jubao-radio {
+        position: absolute;
+        right: 10px;
+        width: 25px;
+        height: 25px;
+        top: 20px;
+    }
+
+    .jubao-detail {
+        position: relative;
+        float: left;
+        width: 360px;
+        margin-left: 20px;
+    }
+
+    .jubao-detail textarea {
+        width: 360px;
+        height: 80px;
+        font-size: 20px;
+        resize: none;
+        line-height: 40px;
+        border: none;
+        background-color: #eee;
+        border-radius: 10px;
+        padding-left: 10px;
+    }
+
+    @-webkit-keyframes guangzhu_ani {
+        from {
+            -webkit-transform: scale(1);
+        }
+        to {
+            -webkit-transform: scale(1.05);
+        }
+    }
+</style>
+<script type="text/javascript" src="./photo_files/xmlHttp.js"></script>
+<script type="text/javascript">
+
+    if (typeof(objid) === "undefined") {
+        var objid = function (id) {
+            return document.getElementById(id);
+        }
+    }
+
+    function random(min, max) {
+        return Math.floor(min + Math.random() * (max - min));
+    }
+
+    function share_url() {
+        // var index = random(0, 5);
+        // index = index>=5?4:index;
+        return "http://photo.kagirl.cn/kphoto/fakeshowbook.php?bookid=" + e_bookid + "&wxid=" + wxid;
+    }
+
+    function on_weixin_share() {
+        wx.hideAllNonBaseMenuItem();
+        wx.showMenuItems({
+            menuList: ["menuItem:share:appMessage", "menuItem:share:timeline", "menuItem:share:qq", "menuItem:share:QZone", "menuItem:favorite", "menuItem:profile", "menuItem:addContact", "menuItem:refresh", "menuItem:copyUrl"] // 要显示的菜单项，所有menu项见附录3
+        });
+        var desc = e_desc.replace("<br>", "\n").replace("<br/>", "\n");
+        wx.onMenuShareAppMessage({
+            title: '音乐相册',
+            desc: desc,
+            link: share_url(),
+            imgUrl: slider_images_url[0],
+            type: 'link',
+            success: function () {
+                share_callback('message');
+            },
+            cancel: function () {
+            }
+        });
+
+        wx.onMenuShareTimeline({
+            title: desc,
+            link: share_url(),
+            imgUrl: slider_images_url[0],
+            success: function () {
+                share_callback('timeline');
+            },
+            cancel: function () {
+            }
+        });
+        wx.onMenuShareQQ({
+            title: '音乐相册',
+            desc: desc,
+            link: share_url(),
+            imgUrl: slider_images_url[0],
+            type: 'link',
+            success: function () {
+                share_callback('message');
+            },
+            cancel: function () {
+            }
+        });
+
+        wx.onMenuShareQZone({
+            title: '音乐相册',
+            desc: desc,
+            link: share_url(),
+            imgUrl: slider_images_url[0],
+            type: 'link',
+            success: function () {
+                share_callback('message');
+            },
+            cancel: function () {
+            }
+        });
+    }
+
+    function share_callback(type) {
+        var url = "editbook.php?type=" + type + "&bookid=" + e_bookid + "&wxid=" + wxid + "&shareid=" + shareid;
+
+        if (e_openid != null) {
+            url = url + '&openid=' + e_openid;
+        }
+
+        url = url + "&desc=" + encodeURIComponent(e_desc);
+
+        if (e_music_url !== "") {
+            url = url + "&music=" + encodeURIComponent(e_music_url);
+        }
+
+        url = url + "&scene=" + e_scene;
+
+        location.href = url;
+    }
+
+    function on_wx_music_init() {
+        if (e_desc != "") {
+            document.title = e_desc.replace("<br>", "\n").replace("<br/>", "\n");
+        }
+        else {
+            document.title = "音乐相册";
+        }
+        create_music();
+        on_weixin_share();
+        setTimeout(get_address, 500);
+
+        if (editmode == false) {
+            var obj = document.getElementById("guanzhu_container");
+            obj.style.visibility = 'visible';
+            if (navigator.userAgent.match(/MicroMessenger/) == null) {
+                obj.innerHTML = "关注我";
+            }
+            objid("jubao-click").style.display = "block";
+            //var obj = document.getElementById("kawa-youli");
+            //obj.style.visibility = 'visible';
+        }
+    }
+
+    call_me(on_wx_music_init);
+
+    //音乐播放
+
+    var music_header = 'http://kawaweika.qiniudn.com/sound/';
+    var e_music_player = new Audio();
+
+    function play_music() {
+        if (e_music_url == '') {
+            return;
+        }
+
+        e_music_player.src = e_music_url;
+        e_music_player.loop = 'loop';
+        e_music_player.play();
+
+        if (objid('sound_image')) {
+            objid('sound_image').style.webkitAnimation = "zhuan 1s linear infinite";
+        }
+
+        bplay = 1;
+    }
+
+    function create_music() {
+        if (e_music_url == '') {
+            return;
+        }
+
+        play_music();
+
+        sound_div = document.createElement("div");
+        sound_div.setAttribute("ID", "cardsound");
+        sound_div.style.cssText = "position:fixed;right:20px;top:25px;z-index:50;visibility:visible;";
+        sound_div.onclick = switchsound;
+
+        bg_htm = "<img id='sound_image' src='http://tu.kagirl.net/pic/music_note_big.png' style='-webkit-animation:zhuan 1s linear infinite'>";
+        txt_htm = "<div id='music_txt' style='color:white;position:absolute;left:-40px;top:30px;width:60px'></div>"
+
+        sound_div.innerHTML = bg_htm + txt_htm;
+
+        document.body.appendChild(sound_div);
+    }
+
+    var bplay = 0;
+
+    function switchsound() {
+        au = e_music_player;
+        ai = objid('sound_image');
+        if (au.paused) {
+            bplay = 1;
+            au.play();
+            ai.style.webkitAnimation = "zhuan 1s linear infinite";
+            objid("music_txt").innerHTML = "打开";
+            objid("music_txt").style.visibility = "visible";
+            setTimeout(function () {
+                objid("music_txt").style.visibility = "hidden"
+            }, 2500);
+        }
+        else {
+            bplay = 0;
+            au.pause();
+            ai.style.webkitAnimation = "";
+            objid("music_txt").innerHTML = "关闭";
+            objid("music_txt").style.visibility = "visible";
+            setTimeout(function () {
+                objid("music_txt").style.visibility = "hidden"
+            }, 2500);
+        }
+    }
+
+    function visit_guanzhu() {
+        if (navigator.userAgent.match(/MicroMessenger/)) {
+            location.href = guanzhu_url;
+        }
+        else {
+            location.href = "http://article.mp.qq.com/index.php/preview/show?p=cd8c8cf61eb8c661b2163815a8f35a59&m=1442370092841159&i=0&t=c005e9f4d683429f35044a50ba3c4ab1&_wv=134217729&v=3&env=10003&mpu=33303236323133363530";
+        }
+    }
+
+    function get_address() {
+        if (location.href.indexOf("bookid=FalD4jB6GUtphMyZUexe9A") == -1 && editmode == false) {
+            url = "getip.php?";
+            //XMLHttp.sendReq('GET', url, '', get_address_callback);
+        }
+    }
+    function get_address_callback(objXMLHttp) {
+        if (objXMLHttp.responseText.indexOf('深圳') != -1) {
+            objid('guanzhu_container').style.webkitAnimation = "aa_out_bounce_left 0.5s .2s ease both";
+            var obj = objid('shenzhen');
+            obj.style.visibility = "visible";
+            obj.style.webkitAnimation = "aa_in_bounce_center 0.5s .2s ease both";
+            obj.href = "http://photo.kagirl.cn/kphoto/showbook.php?bookid=FalD4jB6GUtphMyZUexe9A&wxid=zhi&fromsz=true";
+        }
+    }
+    function more_musicshow() {
+        objid('add_more_music').style.display = 'block';
+        objid('music_name').value = '';
+    }
+    function close_addmusic() {
+        objid('add_more_music').style.display = 'none';
+        objid('add_music_result').style.display = 'none';
+        objid('search_music').style.display = 'none';
+        objid('search_music_result_div').innerHTML = '';
+        objid('e-player').pause();
+        e_music_player.play();
+    }
+    function close_searchmusic() {
+        objid('search_music').style.display = 'none';
+        objid('search_music_result_div').innerHTML = '';
+        e_music_player.play();
+        reflush();
+    }
+    function search_musicshow() {
+        objid('search_music').style.display = 'block';
+        var width = document.body.clientWidth;
+        var height = document.body.clientHeight;
+
+        var div_height = 500 / (width / height);
+        objid('search_music_result').style.height = div_height - 170 + 'px';
+
+    }
+    add_music_xml = new XMLHttpRequest();
+    function submit_addmusic() {
+
+        var musicname = objid('music_name').value;
+        if (musicname == null || musicname == '') {
+            alert('音乐名称不能为空！');
+        }
+        else {
+            var url = 'music_feedback.php?musicname=' + musicname;
+            add_music_xml.open('GET', url, true);
+            add_music_xml.onreadystatechange = add_music_callback;
+            add_music_xml.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            add_music_xml.send(null);
+        }
+    }
+    function trim(str) {
+        return str.replace(/(^\s*)|(\s*$)/g, '');
+    }
+    function add_music_callback() {
+        if (add_music_xml.readyState == 4) {
+            if (add_music_xml.status == 200) {
+                var result = add_music_xml.responseText;
+                console.log(result);
+                if (result.indexOf('1')) {
+                    objid('add_music_result').style.display = 'block';
+                }
+                else
+                    alert('提交失败，请稍后再试。')
+            }
+            // else
+            // 	alert('提交失败，请稍后再试。');
+        }
+        // else
+        // {
+        // 	alert('提交失败，请稍后再试。');
+        // }
+    }
+    music_xml = new XMLHttpRequest();
+    function search_music() {
+        var word = objid('search_musicname').value;
+        word = trim(word);
+        if (word == '' || word == null || word == undefined) {
+            alert('输入不能为空');
+        }
+        word = encodeURIComponent(word);
+        url = 'musicsearch.php?music=' + word;
+
+        music_xml.open('GET', url, true);
+        music_xml.onreadystatechange = SearchMusic_onCallback;
+        music_xml.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        music_xml.send(null);
+
+    }
+    function SearchMusic_onCallback() {
+        if (music_xml.readyState == 4) {
+            if (music_xml.status == 200) {
+                var result = music_xml.responseText;
+                result = JSON.parse(result);
+                var obj = objid('search_music_result_div');
+                // alert(result.length)
+                if (result.length == undefined || result.length == 0) {
+                    var music_value = objid('search_musicname').value;
+                    music_value = trim(music_value);
+                    obj.innerHTML = '<div style="line-height:30px;margin-top:10px;font-size:16px;"><p style="font-size:22px;line-height30px;">找不到与<b>"' + music_value + '"</b>相关音乐</p>请确认歌曲名称是否准确？我们已将该音乐记录下来，并会在第一时间添加在音乐库中，请及时留意音乐库的更新。</div><div style="color:red;text-align:right;text-align:right;width:100px;text-decoration:underline;margin-left:360px;" onclick="more_musicshow();">我要添加>></div>';
+                    obj.style.display = 'block';
+                }
+                else {
+                    var htm_txt = '';
+                    for (var i = 0; i < result.length; i++) {
+                        htm_txt += '<div class="e-mp3box-item"><div class="e-mp3box-item-img"><img src="http://7oxk50.com2.z0.glb.qiniucdn.com/icon/yinfu.png"></div><div id="search_music_result_text" class="e-mp3box-item-title" onclick="search_music_title_click(' + "'" + result[i]['url'] + "'" + ',' + i + ')">' + result[i]['title'] + '</div><div id="search_music_btn' + i + '" class="search-mp3box-item-ok" id="search-music-ok-' + i + '" onclick="search_music_select(' + "'" + result[i]['musicname'] + "'" + ',' + i + ')">确定</div></div>';
+                    }
+                    obj.innerHTML = htm_txt;
+                    obj.style.display = 'block';
+                    // htm_txt += '<div class="e-mp3box-item-img"  id="e-music-img-'+(i+oks_num)+'"><img src="http://7oxk50.com2.z0.glb.qiniucdn.com/icon/yinfu.png"></div>';
+
+                    // htm_txt += '<div class="e-mp3box-item-title" onclick="e_music_title_click(\''+url+'\','+(i+oks_num)+')">'+title+'</div>';
+
+                    // htm_txt += '<div class="e-mp3box-item-ok" id="e-music-ok-'+(i+oks_num)+'" onclick="e_music_select(\''+musicname+'\')">确定</div>';
+
+                    // 		var str = '<div class="e-mp3box-item-img"><img src="http://7oxk50.com2.z0.glb.qiniucdn.com/icon/yinfu.png"></div><div id="search_music_result_text" class="e-mp3box-item-title" onclick="search_music_title_click('+"'"+result['url']+"'"+')">'+result['title']+'</div><div id="search_music_result_btn" class="e-mp3box-item-ok" id="e-music-ok-0" onclick="search_music_select('+"'"+result['musicname']+"'"+')">确定</div>';
+                    // 		obj.innerHTML = str;
+                    // 		obj.style.display = 'block';					
+                }
+
+                // objid('search_music_result_text').innerHTML = result['title'];
+                // objid('search_music_result_text').onclick="e_music_title_click('"+result['url']+"',0)";
+                // objid('search_music_result_btn').onclick = "e_music_select('"+result['musicname']+"')";
+                // objid('search_music_result').innerHTML = result;
+            }
+            else {
+                console.log('Error: ' + music_xml.status)
+            }
+        }
+    }
+    function search_music_title_click(url, index) {
+        var oks = document.getElementsByClassName('search-mp3box-item-ok');
+
+        for (var i = 0; i < oks.length; i++) {
+            oks[i].style.display = 'none';
+        }
+        objid('search_music_btn' + index).style.display = 'block';
+        // objid('e-music-ok-' + index).style.display = 'block';
+        //objid('e-music-img-' + index).style.webkitAnimation = 'zhuan 2.5s linear infinite';
+
+        if (e_music_player != null) {
+            e_music_player.pause();
+
+            if (objid('sound_image')) {
+                objid('sound_image').style.webkitAnimation = "";
+            }
+        }
+
+        if (objid('e-player') == null) {
+            var player = document.createElement('audio');
+            player.id = 'e-player';
+            player.src = url;
+            player.loop = 'loop';
+            player.play();
+            document.body.appendChild(player);
+        }
+        else if (objid('e-player').src == url) {
+            if (objid('e-player').paused) {
+                objid('e-player').play();
+            }
+            else {
+                objid('e-player').pause();
+                objid('e-music-img-' + index).style.webkitAnimation = '';
+            }
+        }
+        else {
+            objid('e-player').src = url;
+            objid('e-player').play();
+        }
+    }
+    function search_music_select(url) {
+        objid('search_music').style.display = 'none';
+        e_music_url = url;
+
+        if (typeof(reload_scene) == "undefined") {
+            var url = "editbook.php?";
+            url = url + 'type=set_music';
+            url = url + "&openid=" + e_openid;
+            url = url + "&bookid=" + e_bookid;
+            url = url + "&music=" + encodeURIComponent(e_music_url);
+            url = url + "&wxid=" + wxid;
+
+            XMLHttp.sendReq('GET', url, '', function () {
+                location.reload();
+            });
+        }
+        else {
+            tool_close();
+
+            if (e_music_player) {
+                if (!objid('cardsound')) {
+                    create_music();
+                    e_music_player.play();
+                }
+
+                e_music_player.src = objid('e-player').src;
+                e_music_player.play();
+            }
+            else {
+                create_music();
+            }
+
+            e_close_wind();
+            var url = "editbook.php?";
+            url = url + 'type=set_music';
+            url = url + "&openid=" + e_openid;
+            url = url + "&bookid=" + e_bookid;
+            url = url + "&music=" + encodeURIComponent(e_music_url);
+            url = url + "&wxid=" + wxid;
+
+            XMLHttp.sendReq('GET', url, '', function () {
+                //location.reload();
+            });
+        }
+
+
+    }
+    var bjubao_type = false;
+    function showjubaoimg(num) {
+        var img = objid('jubaoimg-' + num);
+        if (img.style.display == 'none') {
+
+            var imgarr = document.getElementsByClassName('jubao-radio');
+            for (var i = 0; i < imgarr.length; i++) {
+                imgarr[i].style.display = 'none';
+            }
+            img.style.display = 'block';
+            if (objid("jubao-detail").value >= 5) {
+                objid('jubao-submit').style.display = 'block';
+            }
+            bjubao_type = true;
+        }
+        else {
+            img.style.display = 'none';
+            objid('jubao-submit').style.display = 'none';
+            bjubao_type = false;
+
+        }
+    }
+    function showjubaoimg2() {
+        if (objid("jubao-detail").value.length >= 5 && bjubao_type) {
+            objid('jubao-submit').style.display = 'block';
+        }
+        else {
+            objid('jubao-submit').style.display = 'none';
+        }
+    }
+    function showjubao() {
+        if (localStorage.getItem(e_bookid + wxid) == "1") {
+            alert("您已经反馈过这个相册了");
+            return;
+        }
+        objid('jubao-content').style.display = 'block';
+    }
+    function hidejubao() {
+        objid('jubao-content').style.display = 'none';
+    }
+    function submitjubao() {
+        if (objid("jubao-detail").value.length < 5) {
+            alert("问题描述字数太少！");
+            return;
+        }
+        var img_arr = document.getElementsByClassName('jubao-radio');
+        var jubao_type = 0;
+        while (img_arr[jubao_type].style.display == 'none') {
+            jubao_type++;
+        }
+        alert('反馈提交成功！');
+        id('jubao-content').style.display = 'none';
+        localStorage.setItem(e_bookid + wxid, 1);
+        var jubaourl = 'http://photo7.kagirl.cn/kphoto/jubao.php?bookid=' + e_bookid + '&wxid=' + wxid + '&type=' + jubao_type + "&detail=" + encodeURIComponent(objid("jubao-detail").value);
+        XMLHttp.sendReq("get", jubaourl, "", function (objXMLHttp) {
+        });
+    }
+</script>
+<!--
+    <div id="guanzhu_container" style="visibility:hidden" ontouchstart="visit_guanzhu()">
+
+		<div id="pxvcLXEqA-an-obj-1">
+			<div>
+				<img height="28" width="29"  src="http://7xjeju.com2.z0.glb.qiniucdn.com/guanzhu/dian.png">
+			</div>
+		</div>
+		
+		<div id="pxvcLXEqA-an-obj-2">
+			<div>
+				<img height="26" width="28"  src="http://7xjeju.com2.z0.glb.qiniucdn.com/guanzhu/zhe.png">
+			</div>
+		</div>
+		
+		<div id="pxvcLXEqA-an-obj-3">
+			<div>
+				<img height="26" width="28"  src="http://7xjeju.com2.z0.glb.qiniucdn.com/guanzhu/li.png">
+			</div>
+		</div>
+		
+		<div id="pxvcLXEqA-an-obj-4">
+			<div>
+				<img  height="27" width="26"  src="http://7xjeju.com2.z0.glb.qiniucdn.com/guanzhu/zi.png">
+			</div>
+		</div>
+		
+		<div id="pxvcLXEqA-an-obj-5">
+			<div>
+				<img  height="27" width="28"  src="http://7xjeju.com2.z0.glb.qiniucdn.com/guanzhu/ji.png">
+			</div>
+		</div>
+
+		<div id="pxvcLXEqA-an-obj-6">
+			<div>
+				<img  height="27" width="28"  src="http://7xjeju.com2.z0.glb.qiniucdn.com/guanzhu/zuo.png">
+			</div>
+		</div>
+
+		<div id="pxvcLXEqA-an-obj-7">
+			<div>
+				<img  height="26" width="29"  src="http://7xjeju.com2.z0.glb.qiniucdn.com/guanzhu/xiang.png">
+			</div>
+		</div>
+
+		<div id="pxvcLXEqA-an-obj-8">
+			<div>
+				<img  height="27" width="28"  src="http://7xjeju.com2.z0.glb.qiniucdn.com/guanzhu/ce.png">
+			</div>
+		</div>
+
+		<div id="pxvcLXEqA-an-obj-9">
+
+			<div id="pxvcLXEqA-an-obj-10">
+				<div id="pxvcLXEqA-an-obj-11">
+					<div>
+						<img  height="12" width="20"  src="http://7xjeju.com2.z0.glb.qiniucdn.com/guanzhu/kawa2.png">
+					</div>
+					<div id="pxvcLXEqA-an-obj-12">
+						<div>
+							<img  height="8" width="10"  src="http://7xjeju.com2.z0.glb.qiniucdn.com/guanzhu/kawa3.png">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="pxvcLXEqA-an-obj-13">
+				<div>
+					<img  height="80" width="65"  src="http://7xjeju.com2.z0.glb.qiniucdn.com/guanzhu/kawa1.png">
+				</div>
+			</div>
+
+			<div id="pxvcLXEqA-an-obj-14">
+				<div>
+					<img  height="12" width="20"  src="http://7xjeju.com2.z0.glb.qiniucdn.com/guanzhu/kawa2.png">
+				</div>
+			</div>
+		</div>		
+	</div>
+-->
+
+<a id="guanzhu_container" ontouchstart="visit_guanzhu()" class="large green button"
+   style="visibility:hidden;text-align:center;line-height:30px;font-size:22px;position:fixed;bottom:20px;left:150px;width:200px;height:45px;z-index:10000;-webkit-animation:guangzhu_ani 0.8s linear infinite alternate">自己做相册</a>
+<!-- 	<div id='licaitong' style='position:fixed;width:86px;bottom:0px;opacity:0.8;left:413px;height:103px;' onclick='window.location.href="https://qian.tenpay.com/weixin/action/shake150818/index.shtml?actid=50091&min_reward_money=200&stat_data=fm_162_llhb_5&stat_type=68&ADTAG=2015.ACT.LLHB.HB5"'  ontouchstart='window.location.href="https://qian.tenpay.com/weixin/action/shake150818/index.shtml?actid=50091&min_reward_money=200&stat_data=fm_162_llhb_5&stat_type=68&ADTAG=2015.ACT.LLHB.HB5"'>
+		<img src='image/guanggao/jiao2.png' style='width:86px;'>
+		<img src='image/guanggao/jinbi.png' style='position:absolute;left:57px;top:68px;-webkit-animation: jinbi 1.5s linear infinite alternate;width:25px;'>
+	</div> -->
+<div id="jubao-click"
+     style="display:none;width:500px;height:50px;position:fixed;bottom:0px;color:white;text-shadow:1px 1px 1px #000;opacity:0.5;z-index:100">
+    <div style="position:absolute;text-align:center;width:500px;top:35px;text-decoration:none;font-size:12px;">
+        该相册为用户个人作品，非公众号发布
+    </div>
+    <div onclick="showjubao()"
+         style="position:absolute;left:420px;top:-16px;text-shadow: none;background-color: rgba(0, 0, 0, 0.5);width: 45px;height: 45px;border-radius: 50%;font-size: 16px;line-height: 45px;text-align: center;">
+        反馈
+    </div>
+</div>
+<div id="kawa-youli" style="position:fixed;width:50px;height:50px;visibility:hidden;
+    background-color:#dd0000;color:yellow;text-align:center;
+    border-radius:25px;bottom:18px;
+    right:10px;padding:0px;margin:0px;
+    -webkit-box-sizing:border-box;
+    -webkit-box-shadow: #666 0px 0px 10px;
+    font-size:8pt;padding-top:11px;z-index:10000;"
+     ontouchstart="location.href=&#39;http://photo1.kagirl.cn/kphoto/htm/toyouli.htm&#39;">
+    <b>卡娃<br>心意坊</b>
+</div>
+
+<div id="jubao-content"
+     style="position:absolute;width:400px;background-color:#fff;height:540px;top:100px;left:50px;display:none;z-index:15000">
+    <div style="width:400px;height:45px;background-color:rgb(250,97,65);text-align:center;font-size:22px;color:#fff;line-height:45px;">
+        意见反馈或投诉
+    </div>
+    <div id="jubao-1" class="jubao-item" onclick="showjubaoimg(0)">色情低俗<img id="jubaoimg-0" class="jubao-radio"
+                                                                            style="display:none"
+                                                                            src="./photo_files/jubao.png"></div>
+    <div id="jubao-2" class="jubao-item" onclick="showjubaoimg(1)">谣言<img id="jubaoimg-1" class="jubao-radio"
+                                                                          style="display:none"
+                                                                          src="./photo_files/jubao.png"></div>
+    <div id="jubao-3" class="jubao-item" onclick="showjubaoimg(2)">诱导分享<img id="jubaoimg-2" class="jubao-radio"
+                                                                            style="display:none"
+                                                                            src="./photo_files/jubao.png"></div>
+    <div id="jubao-4" class="jubao-item" onclick="showjubaoimg(3)">政治敏感<img id="jubaoimg-3" class="jubao-radio"
+                                                                            style="display:none"
+                                                                            src="./photo_files/jubao.png"></div>
+    <div id="jubao-5" class="jubao-item" onclick="showjubaoimg(4)">冒用或诽谤他人<img id="jubaoimg-4" class="jubao-radio"
+                                                                               style="display:none"
+                                                                               src="./photo_files/jubao.png"></div>
+    <div id="jubao-6" class="jubao-item" onclick="showjubaoimg(5)">其他<img id="jubaoimg-5" class="jubao-radio"
+                                                                          style="display:none"
+                                                                          src="./photo_files/jubao.png"></div>
+    <div class="jubao-detail">
+        <textarea id="jubao-detail" placeholder="问题描述（必填，至少5个字）" oninput="showjubaoimg2()" maxlength="100"></textarea>
+    </div>
+    <div onclick="hidejubao()" id="jubao-cancel"
+         style="position:absolute;width:120px;height:40px;background-color:#ACABAB;left:47px;top:480px;color:white;border-radius:5px;font-size:20px;line-height:40px;text-align:center;">
+        取消
+    </div>
+    <div style="position:absolute;width:120px;height:40px;background-color:#ACABAB;left:229px;top:480px;color:white;border-radius:5px;font-size:20px;line-height:40px;text-align:center;">
+        提交
+    </div>
+    <div onclick="submitjubao()" id="jubao-submit"
+         style="position:absolute;width:120px;height:40px;background-color:rgb(250,97,65);left:229px;top:480px;color:white;border-radius:5px;font-size:20px;line-height:40px;text-align:center;display:none">
+        提交
+    </div>
+</div>
+
+
+<!--
+	<a id="shenzhen" style="visibility:hidden;text-align:center;line-height:30px;font-size:22px;position:fixed;bottom:20px;left:275px;width:200px;height:45px;z-index:10000;" class="large blue button" href="#">点我看深圳夜景</a>
+-->
+
+<!-- <script type="text/javascript" src="http://tajs.qq.com/stats?sId=49849725" charset="UTF-8"></script> -->
+<!-- <script type="text/javascript" src="http://tajs.qq.com/stats?sId=51790002" charset="UTF-8"></script> -->
+
+
+<style type="text/css">
+
+    .e-menu {
+        position: fixed;
+        top: 100%;
+        left: 0px;
+        height: 40px;
+        margin-top: -50px;
+        width: 100%;
+        z-index: 10002;
+        -webkit-box-sizing: border-box;
+    }
+
+    .e-menu-item {
+        position: relative;
+        float: left;
+        width: 80px;
+        height: 100%;
+        line-height: 40px;
+        text-align: center;
+        font-size: 15pt;
+        border: 1px solid #666666;
+        border-radius: 7px;
+        color: white;
+        margin-left: 34px;
+        -webkit-box-sizing: border-box;
+    }
+
+    .e-opacity-back {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: black;
+        border-radius: 7px;
+        opacity: 0.68;
+        -webkit-box-sizing: border-box;
+    }
+
+    #e-wind {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        overflow: hidden;
+        z-index: 10001;
+        -webkit-box-sizing: border-box;
+    }
+
+    #e-wind-title {
+        position: relative;
+        width: 100%;
+        height: 60px;
+        background-color: rgb(250, 97, 65);
+        color: white;
+        font-size: 18pt;
+        line-height: 60px;
+        padding-left: 4%;
+        -webkit-box-sizing: border-box;
+    }
+
+    #e-wind-close {
+        position: absolute;
+        top: 0px;
+        float: right;
+        right: 20px;
+        height: 100%;
+        line-height: 60px;
+        font-size: 40pt;
+        -webkit-box-sizing: border-box;
+    }
+
+    #e-wind-content {
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        -webkit-box-sizing: border-box;
+    }
+
+    .e-template-item {
+        position: relative;
+        float: left;
+        width: 140px;
+        margin: 20px 0 0 20px;
+        height: 180px;
+        border-left: 1px solid #dddddd;
+        border-top: 1px solid #dddddd;
+        box-shadow: 2px 2px 3px #dddddd;
+        padding: 5px;
+        -webkit-box-sizing: border-box;
+    }
+
+    .e-template-item img {
+        width: 100%;
+        -webkit-box-sizing: border-box;
+    }
+
+    .e-template-item span {
+        width: 100%;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+        font-size: 15pt;
+        font-family: '微软雅黑';
+    }
+
+    .e-content-bottom {
+        position: relative;
+        float: left;
+        width: 500px;
+        height: 120px;
+        -webkit-box-sizing: border-box;
+    }
+
+    #e-music-menu, #e-template-menu {
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        background: -webkit-gradient(linear, 0% 50%, 100% 50%, from(rgb(93, 81, 65)), to(rgb(75, 65, 63)));
+        -webkit-box-sizing: border-box;
+    }
+
+    #e-music-menu div {
+        padding-left: 20px;
+        position: relative;
+        float: left;
+        color: white;
+        font-size: 15pt;
+        -webkit-box-sizing: border-box;
+    }
+
+    #e-template-menu div {
+        padding-left: 28px;
+        position: relative;
+        float: left;
+        color: white;
+        font-size: 15pt;
+        -webkit-box-sizing: border-box;
+    }
+
+    #e-mp3box, #e-template-box {
+        position: absolute;
+        height: 600px;
+        width: 500px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        -webkit-box-sizing: border-box;
+    }
+
+    .e-mp3box-item {
+        position: relative;
+        height: 80px;
+        width: 100%;
+        border-bottom: 2px ridge #E5E5E5;
+        -webkit-box-sizing: border-box;
+    }
+
+    .e-mp3box-item-img {
+        position: relative;
+        float: left;
+        margin: 24px 0 0 20px;
+        -webkit-box-sizing: border-box;
+    }
+
+    .e-mp3box-item-title {
+        position: relative;
+        float: left;
+        text-align: left;
+        margin-left: 20px;
+        width: 60%;
+        font-size: 18pt;
+        font-weight: bold;
+        color: black;
+        height: 80px;
+        line-height: 80px;
+        -webkit-box-sizing: border-box;
+    }
+
+    .e-mp3box-item-ok, .search-mp3box-item-ok {
+        position: relative;
+        display: none;
+        float: right;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        margin: 20px 20px 0 0;
+        text-align: center;
+        font-size: 18pt;
+        font-weight: bold;
+        width: 65px;
+        background-color: #FF2D52;
+        color: white;
+        border-radius: 7px 7px 7px 7px;
+        -webkit-box-sizing: border-box;
+    }
+
+    .e-addpic-btn {
+        width: 200px;
+        background-color: #FA6141;
+        color: white;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        margin: 20px 0 0 150px;
+        font-size: 18pt;
+        border-radius: 30px;
+        -webkit-box-sizing: border-box;
+    }
+
+    .e-addpic-tip {
+        position: absolute;
+        width: 460px;
+        left: 20px;
+        height: 400px;
+        background-color: white;
+        display: none;
+        z-index: 1;
+        top: 20px;
+        -webkit-box-sizing: border-box;
+        text-align: center;
+    }
+
+    .e-addpic-tip span {
+        display: block;
+        width: 400px;
+        text-align: center;
+        font-size: 15pt;
+        line-height: 30px;
+        font-weight: bold;
+        margin: 20px 0 5px 30px;
+        -webkit-box-sizing: border-box;
+    }
+
+    .e-addpic-tip div {
+        position: relative;
+        float: left;
+        width: 110px;
+        height: 40px;
+        line-height: 40px;
+        color: white;
+        text-align: center;
+        border-radius: 30px;
+        background-color: #FA6141;
+        margin-left: 80px;
+        margin-top: 5px;
+        font-size: 15pt;
+        -webkit-box-sizing: border-box;
+    }
+
+    .e-del-pic {
+        position: relative;
+        float: left;
+        width: 136px;
+        margin: 20px 0 0 20px;
+        height: 140px;
+        background-size: cover;
+        border: 1px solid #BFBFBF;
+        box-shadow: 2px 2px 3px #aaaaaa;
+        -webkit-box-sizing: border-box;
+    }
+
+    .e-del-ok {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 30pt;
+        -webkit-box-sizing: border-box;
+    }
+
+    .e-del-ok > div {
+        border-radius: 50% !important;
+        z-index: 0 !important;
+        position: absolute;
+        color: white;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        -webkit-box-sizing: border-box;
+    }
+
+    .e-share-words, .e-share-title, .e-share-ok {
+        position: relative;
+        float: left;
+        width: 450px;
+        left: 25px;
+        margin-top: 40px;
+        -webkit-border-radius: 7px;
+        background-color: #e3e3e3;
+        -webkit-box-sizing: border-box;
+    }
+
+    #e-share-words, #e-share-title {
+        line-height: 33px;
+        width: 440px;
+        padding-left: 10px;
+        -webkit-background-clip: padding-box;
+        background: rgba(227, 227, 227, 1);
+        -webkit-border-radius: 7px;
+        font-size: 18pt;
+        resize: none;
+        border: none;
+        outline: none;
+        -webkit-box-sizing: border-box;
+    }
+
+    #e-share-title {
+        line-height: 65px;
+        -webkit-box-sizing: border-box;
+    }
+
+    .e-share-ok {
+        color: white;
+        font-size: 18pt;
+        font-weight: bold;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        background-color: rgb(250, 97, 65);
+        -webkit-box-sizing: border-box;
+    }
+
+</style>
+
+<div class="e-menu">
+    <div class="e-menu-item" onclick="e_templates(1)">
+        <div>选模板</div>
+        <div class="e-opacity-back"></div>
+    </div>
+    <div class="e-menu-item" onclick="e_musics(2)">
+        <div>选音乐</div>
+        <div class="e-opacity-back"></div>
+    </div>
+    <div class="e-menu-item" onclick="e_pics(3)">
+        <div>增删图</div>
+        <div class="e-opacity-back"></div>
+    </div>
+    <div class="e-menu-item" onclick="e_words(4)">
+        <div>写标题</div>
+        <div class="e-opacity-back"></div>
+    </div>
+</div>
+<div id="e-wind" style="display:none">
+    <div id="e-wind-title">
+        <div id="e-title-words">选择模板</div>
+        <div id="e-wind-close" onclick="reflush()">×</div>
+    </div>
+    <div id="e-wind-content">
+        <div id="e-content-1">
+            <div id="e-template-menu">
+                <div id="e-template-type-hot" onclick="e_template_type(&#39;hot&#39;)">热门</div>
+                <div id="e-template-type-xinqing" style="color:rgb(214,66,90)"
+                     onclick="e_template_type(&#39;xinqing&#39;)">心情
+                </div>
+                <div id="e-template-type-aiqing" style="color:rgb(214,66,90)"
+                     onclick="e_template_type(&#39;aiqing&#39;)">爱情
+                </div>
+                <div id="e-template-type-ertong" style="color:rgb(214,66,90)"
+                     onclick="e_template_type(&#39;ertong&#39;)">儿童
+                </div>
+                <div id="e-template-type-jieri" style="color:rgb(214,66,90)" onclick="e_template_type(&#39;jieri&#39;)">
+                    节日
+                </div>
+                <div id="e-template-type-fengjing" style="color:rgb(214,66,90)"
+                     onclick="e_template_type(&#39;fengjing&#39;)">风景
+                </div>
+                <div id="e-template-type-3d" style="color:rgb(214,66,90)" onclick="e_template_type(&#39;3d&#39;)">3d
+                </div>
+            </div>
+            <div id="e-template-box">
+                <div class="e-template-item" onclick="e_template_click(&#39;nvren&#39;)">
+                    <img src="./photo_files/nvren.webp">
+                    <span>女人节快乐</span>
+                </div>
+                <div id="template-faya" class="e-template-item" onclick="e_template_click(&#39;faya&#39;)">
+                    <img src="./photo_files/faya.png">
+                    <span>春意</span>
+                </div>
+                <div id="template-yanyu" class="e-template-item" onclick="e_template_click(&#39;yanyu&#39;)">
+                    <img src="./photo_files/yanyu.png">
+                    <span>烟雨蒙蒙</span>
+                </div>
+                <div id="template-qingxin" class="e-template-item" onclick="e_template_click(&#39;qingxin&#39;)">
+                    <img src="./photo_files/qingxin.png">
+                    <span>伊然清新</span>
+                </div>
+                <div id="template-qingren" class="e-template-item" onclick="e_template_click(&#39;qingren&#39;)">
+                    <img src="./photo_files/qingren.png">
+                    <span>浪漫满屋</span>
+                </div>
+                <div id="template-xinchun" class="e-template-item" onclick="e_template_click(&#39;xinchun&#39;)">
+                    <img src="./photo_files/xinchun.png">
+                    <span>金猴贺岁</span>
+                </div>
+                <div id="template-xinnian2" class="e-template-item" onclick="e_template_click(&#39;xinnian2&#39;)">
+                    <img src="./photo_files/xinnian2.png">
+                    <span>猴年大吉</span>
+                </div>
+                <div id="template-bingxue" class="e-template-item" onclick="e_template_click(&#39;bingxue&#39;)">
+                    <img src="./photo_files/snow.png">
+                    <span>冰雪奇缘</span>
+                </div>
+                <div id="template-jiniance" class="e-template-item" onclick="e_template_click(&#39;jiniance&#39;)">
+                    <img src="./photo_files/jiniance.png">
+                    <span>纪念册</span>
+                </div>
+                <div id="template-qingchun" class="e-template-item" onclick="e_template_click(&#39;qingchun&#39;)">
+                    <img src="./photo_files/qingchun.png">
+                    <span>致青春</span>
+                </div>
+                <div id="template-yuanxiao" class="e-template-item" onclick="e_template_click(&#39;yuanxiao&#39;)">
+                    <img src="./photo_files/yuanxiao1.png">
+                    <span>花好月圆</span>
+                </div>
+                <div id="template-moshang" class="e-template-item" onclick="e_template_click(&#39;moshang&#39;)">
+                    <img src="./photo_files/moshang.png">
+                    <span>墨上花开</span>
+                </div>
+                <div id="template-lonely" class="e-template-item" onclick="e_template_click(&#39;lonely&#39;)">
+                    <img src="./photo_files/lonely.png">
+                    <span>雨中漫步</span>
+                </div>
+                <div id="template-xinnian1" class="e-template-item" onclick="e_template_click(&#39;xinnian1&#39;)">
+                    <img src="./photo_files/xinnian1.png">
+                    <span>新年快乐</span>
+                </div>
+                <div id="template-xinnian" class="e-template-item" onclick="e_template_click(&#39;xinnian&#39;)">
+                    <img src="./photo_files/xinnian.png">
+                    <span>欢度新年</span>
+                </div>
+                <div id="template-fulushou" class="e-template-item" onclick="e_template_click(&#39;fulushou&#39;)">
+                    <img src="./photo_files/fulushou.png">
+                    <span>福禄寿</span>
+                </div>
+                <div id="template-baokan" class="e-template-item" onclick="e_template_click(&#39;baokan&#39;)">
+                    <img src="./photo_files/baokan.png">
+                    <span>温暖时光</span>
+                </div>
+                <div id="template-baby" class="e-template-item" onclick="e_template_click(&#39;baby&#39;)">
+                    <img src="./photo_files/baby.png">
+                    <span>宝宝相册</span>
+                </div>
+                <div id="template-cubeover" class="e-template-item" onclick="e_template_click(&#39;cubeover&#39;)">
+                    <img src="./photo_files/01.png">
+                    <span>3D魔方</span>
+                </div>
+                <div id="template-zazhi" class="e-template-item" onclick="e_template_click(&#39;zazhi&#39;)">
+                    <img src="./photo_files/zazhi.png">
+                    <span>梦幻光影</span>
+                </div>
+                <div id="template-lianhua" class="e-template-item" onclick="e_template_click(&#39;lianhua&#39;)">
+                    <img src="./photo_files/lianhua.png">
+                    <span>蝶恋花</span>
+                </div>
+
+                <div id="template-xiantiao" class="e-template-item" onclick="e_template_click(&#39;xiantiao&#39;)">
+                    <img src="./photo_files/xiantiao.png">
+                    <span>向日葵</span>
+                </div>
+                <div id="template-huijia" class="e-template-item" onclick="e_template_click(&#39;huijia&#39;)">
+                    <img src="./photo_files/huijia.png">
+                    <span>回家过年</span>
+                </div>
+                <div id="template-pinzhi" class="e-template-item" onclick="e_template_click(&#39;pinzhi&#39;)">
+                    <img src="./photo_files/pinzhi.png">
+                    <span>品质生活</span>
+                </div>
+                <div id="template-meishi" class="e-template-item" onclick="e_template_click(&#39;meishi&#39;)">
+                    <img src="./photo_files/meishi.png">
+                    <span>美味佳肴</span>
+                </div>
+                <div id="template-xinfeng" class="e-template-item" onclick="e_template_click(&#39;xinfeng&#39;)">
+                    <img src="./photo_files/chunxin.png">
+                    <span>远方的信</span>
+                </div>
+
+                <div id="template-snow" class="e-template-item" onclick="e_template_click(&#39;snow&#39;)">
+                    <img src="./photo_files/xuehua.png">
+                    <span>雪花</span>
+                </div>
+                <div id="template-lvxing" class="e-template-item" onclick="e_template_click(&#39;lvxing&#39;)">
+                    <img src="./photo_files/lvxing.png">
+                    <span>足迹</span>
+                </div>
+                <div id="template-morning" class="e-template-item" onclick="e_template_click(&#39;morning&#39;)">
+                    <img src="./photo_files/morning.png">
+                    <span>阳光宝贝</span>
+                </div>
+                <div id="template-green" class="e-template-item" onclick="e_template_click(&#39;green&#39;)">
+                    <img src="./photo_files/green.png">
+                    <span>绿色心情</span>
+                </div>
+
+                <div id="template-xingfu" class="e-template-item" onclick="e_template_click(&#39;xingfu&#39;)">
+                    <img src="./photo_files/xingfu.png">
+                    <span>幸福时光</span>
+                </div>
+                <div id="template-qianlv" class="e-template-item" onclick="e_template_click(&#39;qianlv&#39;)">
+                    <img src="./photo_files/qianlv.png">
+                    <span>清风蝶影</span>
+                </div>
+                <div id="template-xuandong" class="e-template-item" onclick="e_template_click(&#39;xuandong&#39;)">
+                    <img src="./photo_files/xuandong1.png">
+                    <span>炫动星空</span>
+                </div>
+                <div id="template-qiufeng" class="e-template-item" onclick="e_template_click(&#39;qiufeng&#39;)">
+                    <img src="./photo_files/qiufeng.png">
+                    <span>秋兮枫离</span>
+                </div>
+
+                <div id="template-qiqiu" class="e-template-item" onclick="e_template_click(&#39;qiqiu&#39;)">
+                    <img src="./photo_files/qiqiu.png">
+                    <span>梦幻气球</span>
+                </div>
+                <div id="template-minion" class="e-template-item" onclick="e_template_click(&#39;minion&#39;)">
+                    <img src="./photo_files/minion.png">
+                    <span>快乐宝贝</span>
+                </div>
+                <div id="template-zhongqiu1" class="e-template-item" onclick="e_template_click(&#39;zhongqiu1&#39;)">
+                    <img src="./photo_files/zhongqiu1.png">
+                    <span>团圆美满</span>
+                </div>
+
+                <div id="template-haibo" class="e-template-item" onclick="e_template_click(&#39;haibo&#39;)">
+                    <img src="./photo_files/haibo.png">
+                    <span>阳光沙滩</span>
+                </div>
+                <div id="template-lovetrip" class="e-template-item" onclick="e_template_click(&#39;lovetrip&#39;)">
+                    <img src="./photo_files/lovetrip.png">
+                    <span>爱的旅程</span>
+                </div>
+                <div id="template-huazhou" class="e-template-item" onclick="e_template_click(&#39;huazhou&#39;)">
+                    <img src="./photo_files/guyun.png">
+                    <span>古韵画轴</span>
+                </div>
+                <div id="template-guoqing" class="e-template-item" onclick="e_template_click(&#39;guoqing&#39;)">
+                    <img src="./photo_files/guoqing.png">
+                    <span>旅行志</span>
+                </div>
+                <div id="template-qixi" class="e-template-item" onclick="e_template_click(&#39;qixi&#39;)">
+                    <img src="./photo_files/qixi.png">
+                    <span>浪漫七夕</span>
+                </div>
+                <div id="template-bamboo" class="e-template-item" onclick="e_template_click(&#39;bamboo&#39;)">
+                    <img src="./photo_files/qingzhu.png">
+                    <span>夏日青竹</span>
+                </div>
+                <div id="template-wuwangwo" class="e-template-item" onclick="e_template_click(&#39;wuwangwo&#39;)">
+                    <img src="./photo_files/wuwangwo.png">
+                    <span>勿忘我</span>
+                </div>
+
+                <div id="template-jingjing" class="e-template-item" onclick="e_template_click(&#39;jingjing&#39;)">
+                    <img src="./photo_files/jingjing.png">
+                    <span>星光点点</span>
+                </div>
+
+                <div id="template-paopao" class="e-template-item" onclick="e_template_click(&#39;paopao&#39;)">
+                    <img src="./photo_files/paopao.png">
+                    <span>五彩泡泡</span>
+                </div>
+
+                <div id="template-love" class="e-template-item" onclick="e_template_click(&#39;love&#39;)">
+                    <img src="./photo_files/love2.png">
+                    <span>爱情</span>
+                </div>
+
+                <div id="template-flip" class="e-template-item" onclick="e_template_click(&#39;flip&#39;)">
+                    <img src="./photo_files/02.png">
+                    <span>深邃星空</span>
+                </div>
+
+                <div id="template-brick" class="e-template-item" onclick="e_template_click(&#39;brick&#39;)">
+                    <img src="./photo_files/04.png">
+                    <span>3D酷翻</span>
+                </div>
+                <div id="template-shengdan2" class="e-template-item" onclick="e_template_click(&#39;shengdan2&#39;)">
+                    <img src="./photo_files/shengdan2.png">
+                    <span>圣诞祝福</span>
+                </div>
+                <div id="template-shengdan1" class="e-template-item" onclick="e_template_click(&#39;shengdan1&#39;)">
+                    <img src="./photo_files/shengdan1.png">
+                    <span>欢乐圣诞</span>
+                </div>
+                <div id="template-shengdan" class="e-template-item" onclick="e_template_click(&#39;shengdan&#39;)">
+                    <img src="./photo_files/shengdan.png">
+                    <span>圣诞快乐</span>
+                </div>
+                <div id="template-bubble" class="e-template-item" onclick="e_template_click(&#39;bubble&#39;)">
+                    <img src="./photo_files/03.png">
+                    <span>调皮泡泡</span>
+                </div>
+
+                <div id="template-roll" class="e-template-item" onclick="e_template_click(&#39;roll&#39;)">
+                    <img src="./photo_files/05.png">
+                    <span>欢乐时光</span>
+                </div>
+
+                <div id="template-biyeji" class="e-template-item" onclick="e_template_click(&#39;biyeji&#39;)">
+                    <img src="./photo_files/biyeji1.png">
+                    <span>毕业季</span>
+                </div>
+                <div id="template-zhongqiu" class="e-template-item" onclick="e_template_click(&#39;zhongqiu&#39;)">
+                    <img src="./photo_files/zhongqiu.png">
+                    <span>秋情依依</span>
+                </div>
+                <div id="template-heimao" class="e-template-item" onclick="e_template_click(&#39;heimao&#39;)">
+                    <img src="./photo_files/heimao.png">
+                    <span>黑猫警长</span>
+                </div>
+                <div class="e-content-bottom"></div>
+            </div>
+
+
+        </div>
+        <div id="e-content-2">
+            <div id="e-music-menu">
+                <div id="e-music-type-hot" onclick="e_music_type_click(&#39;hot&#39;)">热门</div>
+                <div id="e-music-type-pop" style="color:rgb(214,66,90)" onclick="e_music_type_click(&#39;pop&#39;)">流行
+                </div>
+                <div id="e-music-type-old" style="color:rgb(214,66,90)" onclick="e_music_type_click(&#39;old&#39;)">怀旧
+                </div>
+                <div id="e-music-type-pure" style="color:rgb(214,66,90)" onclick="e_music_type_click(&#39;pure&#39;)">
+                    纯音乐
+                </div>
+
+                <div id="e-music-type-feast" style="color:rgb(214,66,90)" onclick="e_music_type_click(&#39;feast&#39;)">
+                    生日
+                </div>
+                <!-- 	    		<div id="e-music-type-birthday"  style="color:rgb(214,66,90)" onclick="e_music_type_click('birthday')">生日</div> -->
+                <div id="e-music-type-child" style="color:rgb(214,66,90)" onclick="e_music_type_click(&#39;child&#39;)">
+                    儿歌
+                </div>
+                <div id="more_music"
+                     style="position:absolute;width:80px;height:40px;border-radius:5px;margin-top:5px;left:410px;color:white;background-color:#AF4352;border-radius:5px;font-size:20px;line-height:40px;text-align:center;padding-left:0px;"
+                     onclick="search_musicshow()">搜索
+                </div>
+            </div>
+            <div id="e-mp3box" onscroll="e_more_music()">
+            </div>
+        </div>
+        <div id="e-content-3">
+            <div class="e-addpic-btn" onclick="e_add_pic()">新增图片</div>
+            <div class="e-addpic-tip" id="e-addpic-tip">
+                <span>返回公众号输入界面，并点击下方”添加图片“按钮，来增加图片。</span>
+                <img src="./photo_files/help2.jpg">
+                <span>确定增加图片吗？</span>
+
+                <div onclick="e_addpic_ok()">确定</div>
+                <div onclick="e_addpic_cancle()">取消</div>
+            </div>
+            <div id="e-pics-content"></div>
+            <div class="e-addpic-btn" style="margin-bottom:190px" onclick="reflush()">完成</div>
+        </div>
+        <div id="e-content-4">
+            <!--
+    		<div class="e-share-title">
+    			<textarea id="e-share-title" maxlength="15" rows="1" placeholder="分享标题(限15字)..."></textarea>
+    		</div>
+    		-->
+            <div class="e-share-words">
+                <textarea id="e-share-words" maxlength="30" rows="3" placeholder="分享文字(限30字)..."></textarea>
+            </div>
+            <div class="e-share-ok" onclick="e_set_desc()">确定</div>
+        </div>
+    </div>
+</div>
+<div id="search_music"
+     style="position:absolute;width:500px;height:815px;background-color:white;top:0px;left:0px;z-index:10003;display:none;">
+    <div style="position:relative;width:500px;height:60px;background-color:rgb(250,97,65);color:white;padding-left:20px;font-size:25px;line-height:60px;">
+        搜索音乐
+    </div>
+    <div style="color:white;font-size:40pt;line-height:60px;position:absolute;width:60px;height:60px;top:0px;left:440px;"
+         onclick="close_searchmusic()">×
+    </div>
+    <input id="search_musicname"
+           style="width:380px;height:50px;position:relative;margin:20px 0px 0px 15px;font-size:20px;padding-left:5px;"
+           placeholder="请输入您想查找的歌曲名称">
+
+    <div id="search_music_submit"
+         style="position:absolute;width:87px;color:white;background-color:rgb(250,97,65);height:50px;left:403px;top:81px;font-size:23px;text-align:center;line-height:50px;border-radius:10px;"
+         onclick="search_music()">搜索
+    </div>
+    <div id="search_music_result"
+         style="position:relative;margin: 20px 0px 0px 20px;width:460px;height:600px;overflow:auto;">
+        <div id="search_music_result_div" style="display:none;border:0px;" class="e-mp3box-item">
+        </div>
+    </div>
+
+</div>
+<div id="add_more_music"
+     style="position:absolute;width:500px;height:815px;background-color:white;top:0px;left:0px;z-index:10004;display:none;">
+    <div id="music_title"
+         style="position:relative;width:500px;height:60px;background-color:rgb(250,97,65);color:white;padding-left:20px;font-size:25px;line-height:60px;">
+        添加更多的音乐
+    </div>
+    <div id="music_text"
+         style="position:relative;width:460px;margin:20px 0px 0px 20px;font-size:25px;line-height:30px;">
+        音乐太少？没有喜欢的歌曲？<br><span style="font-size:16px;color:#000000;">由于我们的音乐库在不断地更新，可能没有您喜爱的歌曲，请将您喜欢的歌曲告诉我们，我们会尽快为您添加上去。更多相册问题，可加微信号<span
+            style="color:red;font-weight:bold;">kawasc</span>咨询。</span></div>
+    <textarea id="music_name"
+              style="margin:10px 0px 0px 20px;width:460px;height:120px;font-size:20px;padding:10px;"></textarea>
+
+    <div id="add_musicbtn"
+         style="background-color:rgb(250,97,65);width:460px;border-radius:10px;margin:15px 0px 0px 20px;height:70px;position:relative;color:white;line-height:70px;font-size:26px;text-align:center;"
+         onclick="submit_addmusic()">提 交
+    </div>
+    <div id="colse_music"
+         style="color:white;font-size:40pt;line-height:60px;position:absolute;width:60px;height:60px;top:0px;left:440px;"
+         onclick="close_addmusic()">×
+    </div>
+
+    <div id="add_music_result"
+         style="width:500px;position:absolute;top:60px;height:755px;background-color:white;display:none;">
+        <div style="position:relative;width:460px;font-size:24px;margin:20px 0px 0px 20px;line-height:40px;">
+            提交成功，我们会尽快为您添加音乐，请及时留意音乐库的更新！
+        </div>
+        <div style="position:relative;width:460px;background-color:rgb(250,97,65);height:60px;border-radius:10px;color:white;font-size:25px;margin:55px 0px 0px 20px;text-align:center;line-height:60px;"
+             onclick="close_addmusic()">关 闭
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="./photo_files/xmlHttp.js"></script>
+
+<script type="text/javascript">
+
+    //
+    function objid(id) {
+        return document.getElementById(id);
+    }
+
+    function reflush() {
+        if (typeof(reload_scene) == "undefined") {
+            location.reload();
+        }
+        else {
+            e_close_wind();
+            reload_scene();
+        }
+    }
+
+    function e_close_wind() {
+        tool_close();
+
+        objid('e-wind').style.display = 'none';
+
+        if (objid('e-player')) {
+            objid('e-player').pause();
+        }
+    }
+
+    var titles = ["选模板", "选音乐", "更换图片", "写分享的标题"];
+
+    function e_open_wind(index) {
+        tool_open();
+
+        var wind = objid('e-wind');
+        wind.style.display = 'block';
+
+        for (var i = 1; i <= 4; i++) {
+            objid('e-content-' + i).style.display = 'none';
+        }
+
+        objid('e-content-' + index).style.display = 'block';
+
+        objid('e-title-words').innerHTML = titles[index - 1];
+    }
+
+    //
+    function e_templates(index) {
+        e_close_wind();
+        e_open_wind(index);
+    }
+
+    function e_template_click(scene) {
+        var url = 'showbook.php?edit=2&bookid={1}&openid={2}&scene={3}&wxid={4}';
+
+        url = url.replace('{1}', e_bookid);
+        url = url.replace('{2}', e_openid);
+        url = url.replace('{3}', scene);
+        url = url.replace('{4}', wxid);
+
+        location.href = url;
+    }
+
+    //音乐
+    var e_music_page = 0;
+    var e_music_num = 20;
+    var e_music_header = 'http://kawaweika.qiniudn.com/sound/';
+    var e_music_type = 'pop';
+
+    function tool_open() {
+        document.ontouchmove = null;
+    }
+
+    function tool_close() {
+        document.ontouchmove = function (e) {
+            e.preventDefault();
+        }
+    }
+
+    function e_musics(index) {
+        e_close_wind();
+        e_open_wind(index);
+
+        e_music_type = 'hot';
+
+        // objid('e-music-type-hot').style.color = 'rgb(214,66,90)';
+        objid('e-music-type-pop').style.color = 'rgb(214,66,90)';
+        objid('e-music-type-pure').style.color = 'rgb(214,66,90)';
+        objid('e-music-type-old').style.color = 'rgb(214,66,90)';
+        objid('e-music-type-feast').style.color = 'rgb(214,66,90)';
+        objid('e-music-type-child').style.color = 'rgb(214,66,90)';
+        objid('e-music-type-hot').style.color = 'white';
+
+        e_music_page = 0;
+
+        objid('e-mp3box').innerHTML = '';
+
+        var url = "musicstock.php?";
+        url = url + 'type=hot';
+        url = url + "&start=" + e_music_page * e_music_num;
+        url = url + "&count=" + e_music_num;
+
+        XMLHttp.sendReq('GET', url, '', e_music_callback);
+    }
+
+    function e_more_music() {
+        var obj = objid('e-mp3box');
+
+        if (e_music_type == 'hot')
+            return;
+        if (obj.scrollTop + obj.clientHeight + 10 >= obj.scrollHeight) {
+            var url = "musicstock.php?";
+            url = url + 'type=' + e_music_type;
+            url = url + "&start=" + e_music_page * e_music_num;
+            url = url + "&count=" + e_music_num;
+
+            XMLHttp.sendReq('GET', url, '', e_music_callback);
+        }
+    }
+
+    function e_music_type_click(type) {
+        e_music_type = type;
+        e_music_page = 0;
+
+        objid('e-mp3box').innerHTML = '';
+
+        objid('e-music-type-hot').style.color = 'rgb(214,66,90)';
+        objid('e-music-type-pop').style.color = 'rgb(214,66,90)';
+        objid('e-music-type-pure').style.color = 'rgb(214,66,90)';
+        objid('e-music-type-old').style.color = 'rgb(214,66,90)';
+        //objid('e-music-type-feast').style.color = 'rgb(214,66,90)';
+        objid('e-music-type-feast').style.color = 'rgb(214,66,90)';
+        objid('e-music-type-child').style.color = 'rgb(214,66,90)';
+
+        objid('e-music-type-' + type).style.color = 'white';
+
+        var url = "musicstock.php?";
+        url = url + 'type=' + e_music_type;
+        url = url + "&start=" + e_music_page * e_music_num;
+        url = url + "&count=" + e_music_num;
+
+        XMLHttp.sendReq('GET', url, '', e_music_callback);
+    }
+
+    function e_music_callback(objXMLHttp) {
+        if (objXMLHttp.responseText == "0") {
+            if (objid('e-more-music')) {
+                objid('e-mp3box').removeChild(objid('e-more-music'));
+            }
+
+            return;
+        }
+
+        var music_list = JSON.parse(objXMLHttp.responseText);
+
+        if (objid('e-more-music')) {
+            objid('e-mp3box').removeChild(objid('e-more-music'));
+        }
+
+        var mp3box = objid('e-mp3box');
+
+        var oks_num = document.getElementsByClassName('e-mp3box-item-ok').length;
+
+        for (var i = 0; i < music_list.length; i++) {
+            var one = music_list[i];
+            var title = one.title;
+            var url = one.url;
+            var musicname = one.musicname;
+            var div = document.createElement('div');
+
+            div.setAttribute('class', 'e-mp3box-item');
+
+            var htm_txt = '';
+
+            htm_txt += '<div class="e-mp3box-item-img"  id="e-music-img-' + (i + oks_num) + '"><img src="http://7oxk50.com2.z0.glb.qiniucdn.com/icon/yinfu.png"></div>';
+
+            htm_txt += '<div class="e-mp3box-item-title" onclick="e_music_title_click(\'' + url + '\',' + (i + oks_num) + ')">' + title + '</div>';
+
+            htm_txt += '<div class="e-mp3box-item-ok" id="e-music-ok-' + (i + oks_num) + '" onclick="e_music_select(\'' + musicname + '\')">确定</div>';
+
+            div.innerHTML = htm_txt;
+
+            mp3box.appendChild(div);
+        }
+
+        if (music_list.length == e_music_num) {
+            var div = document.createElement('div');
+            div.setAttribute('class', 'e-mp3box-item');
+            div.id = 'e-more-music';
+
+            div.innerHTML = '<div class="e-mp3box-item-title" style="text-align:center;width:90%">加载中...</div>';
+
+            mp3box.appendChild(div);
+        }
+
+        e_music_page++;
+    }
+
+    function e_music_title_click(url, index) {
+        var oks = document.getElementsByClassName('e-mp3box-item-ok');
+
+        for (var i = 0; i < oks.length; i++) {
+            objid('e-music-ok-' + i).style.display = 'none';
+            objid('e-music-img-' + i).style.webkitAnimation = '';
+        }
+
+        objid('e-music-ok-' + index).style.display = 'block';
+        //objid('e-music-img-' + index).style.webkitAnimation = 'zhuan 2.5s linear infinite';
+
+        if (e_music_player != null) {
+            e_music_player.pause();
+
+            if (objid('sound_image')) {
+                objid('sound_image').style.webkitAnimation = "";
+            }
+        }
+
+        if (objid('e-player') == null) {
+            var player = document.createElement('audio');
+            player.id = 'e-player';
+            player.src = url;
+            player.loop = 'loop';
+            player.play();
+            document.body.appendChild(player);
+        }
+        else if (objid('e-player').src == url) {
+            if (objid('e-player').paused) {
+                objid('e-player').play();
+            }
+            else {
+                objid('e-player').pause();
+                objid('e-music-img-' + index).style.webkitAnimation = '';
+            }
+        }
+        else {
+            objid('e-player').src = url;
+            objid('e-player').play();
+        }
+    }
+
+    function e_music_select(url) {
+        e_music_url = url;
+
+        if (typeof(reload_scene) == "undefined") {
+            var url = "editbook.php?";
+            url = url + 'type=set_music';
+            url = url + "&openid=" + e_openid;
+            url = url + "&bookid=" + e_bookid;
+            url = url + "&music=" + encodeURIComponent(e_music_url);
+            url = url + "&wxid=" + wxid;
+
+            XMLHttp.sendReq('GET', url, '', function () {
+                location.reload();
+            });
+        }
+        else {
+            tool_close();
+
+            if (e_music_player) {
+                if (!objid('cardsound')) {
+                    create_music();
+                    e_music_player.play();
+                }
+
+                e_music_player.src = objid('e-player').src;
+                e_music_player.play();
+            }
+            else {
+                create_music();
+            }
+
+            e_close_wind();
+            var url = "editbook.php?";
+            url = url + 'type=set_music';
+            url = url + "&openid=" + e_openid;
+            url = url + "&bookid=" + e_bookid;
+            url = url + "&music=" + encodeURIComponent(e_music_url);
+            url = url + "&wxid=" + wxid;
+
+            XMLHttp.sendReq('GET', url, '', function () {
+                //location.reload();
+            });
+        }
+
+
+    }
+
+    //删图
+    function e_pics(index) {
+        e_close_wind();
+        e_open_wind(index);
+
+        var obj = objid('e-pics-content');
+
+        obj.innerHTML = '';
+
+        for (var i = 0; i < slider_images_url.length; i++) {
+            var div = document.createElement('div');
+            div.id = 'e-del-pic-' + i;
+            div.setAttribute('class', 'e-del-pic');
+            div.style.backgroundImage = 'url(' + slider_images_url[i] + ')';
+
+            var photo_id = slider_images_url[i].replace("http://7xjeju.com2.z0.glb.qiniucdn.com/", "");
+            div.innerHTML = '<div class="e-del-ok" onclick="e_del_pic(' + i + ', \'' + photo_id + '\')"><div class="e-opacity-back"></div><div>×</div></div>';
+            obj.appendChild(div);
+        }
+
+        obj.style.overflow = 'auto';
+
+        var parent = document.getElementById("e-content-3");
+        parent.style.overflow = 'auto';
+    }
+
+    function e_add_pic() {
+        objid('e-addpic-tip').style.display = 'block';
+    }
+
+    function e_addpic_ok() {
+        var url = "editbook.php?";
+        url = url + 'type=add_photo';
+        url = url + "&bookid=" + e_bookid;
+        url = url + "&openid=" + e_openid;
+        url = url + "&wxid=" + wxid;
+
+        XMLHttp.sendReq('GET', url, '', function () {
+            wx.closeWindow();
+        });
+
+    }
+
+    function e_addpic_cancle() {
+        objid('e-addpic-tip').style.display = 'none';
+    }
+
+    function e_del_pic(index, photo_id) {
+        if (!confirm('确定要删除该照片吗？')) {
+            return;
+        }
+
+        var obj = objid('e-pics-content');
+        obj.removeChild(objid('e-del-pic-' + index));
+        var photo_urls = slider_images_url.splice(index, 1);
+
+        on_weixin_share();
+
+        //reset_scene();
+
+        var url = "editbook.php?";
+        url = url + 'type=delete_photo';
+        url = url + "&bookid=" + e_bookid;
+        url = url + "&photoid=" + photo_id;
+        url = url + "&openid=" + e_openid;
+        url = url + "&wxid=" + wxid;
+
+        //location.href = url;
+        XMLHttp.sendReq('GET', url, '', function () {
+        });
+    }
+
+    //标题
+    function e_words(index) {
+        e_close_wind();
+        e_open_wind(index);
+        if (e_desc == '音乐相册，打开看看')
+            objid('e-share-words').value = '';
+        else
+            objid('e-share-words').value = e_desc;
+    }
+
+    function e_set_desc() {
+        var obj = objid('e-share-words');
+        if (obj.value == "") {
+            alert('文字不能为空噢~');
+        }
+        else {
+            e_desc = obj.value;
+            on_weixin_share();
+            document.title = e_desc;
+
+            var url = "editbook.php?";
+            url = url + 'type=set_desc';
+            url = url + "&bookid=" + e_bookid;
+            url = url + "&openid=" + e_openid;
+            url = url + "&desc=" + encodeURIComponent(e_desc);
+            url = url + "&wxid=" + wxid;
+
+            XMLHttp.sendReq('GET', url, '', function () {
+                reflush();
+            });
+        }
+        //e_close_wind();
+    }
+
+    function e_template_type(type) {
+        var template_box = objid('e-template-box');
+
+        var template_arr = {
+            'xinqing': ['faya', 'yanyu', 'jiniance', 'qingchun', 'bingxue', 'lonely', 'qingxin', 'lianhua', 'qianlv', 'moshang', 'baokan', 'green', 'xiantiao', 'meishi', 'snow', 'xinfeng', 'huazhou', 'wuwangwo', 'biyeji'],
+            'aiqing': ['qingren', 'lovetrip', 'qixi', 'xingfu', 'love', 'qiufeng'],
+            'fengjing': ['bamboo', 'haibo', 'qiqiu', 'lvxing'],
+            'jieri': ['xinnian2', 'xinchun', 'yuanxiao', 'xinnian1', 'xinnian', 'fulushou', 'zhongqiu1', 'huijia', 'guoqing', 'shengdan', 'shengdan1', 'shengdan2', 'zhongqiu'],
+            'ertong': ['baby', 'heimao', 'minion', 'morning'],
+            '3d': ['cubeover', 'zazhi', 'xuandong', 'flip', 'brick', 'roll', 'bubble', 'paopao', 'jingjing', 'pinzhi']
+        };
+
+        var all_templates = document.getElementsByClassName('e-template-item')
+        for (var i = 0; i < all_templates.length; i++) {
+            all_templates[i].style.display = 'none';
+        }
+        if (type == '3d' || type == 'aiqing' || type == 'jieri' || type == 'xinqing' || type == 'ertong' || type == 'fengjing') {
+            for (var i = 0; i < template_arr[type].length; i++) {
+                objid('template-' + template_arr[type][i]).style.display = 'block';
+            }
+
+            for (key in template_arr) {
+                objid('e-template-type-' + key).style.color = 'rgb(214,66,90)';
+            }
+            objid('e-template-type-hot').style.color = 'rgb(214,66,90)';
+            objid('e-template-type-' + type).style.color = '#fff';
+        }
+        else {
+            for (var i = 0; i < all_templates.length; i++) {
+                all_templates[i].style.display = 'block';
+            }
+
+            for (key in template_arr) {
+                objid('e-template-type-' + key).style.color = 'rgb(214,66,90)';
+            }
+            objid('e-template-type-hot').style.color = '#fff';
+        }
+
+
+    }
+</script>
+
+<div id="cardsound" style="position: fixed; right: 20px; top: 25px; z-index: 50; visibility: visible;"><img
+        id="sound_image" src="./photo_files/music_note_big.png" style="-webkit-animation:zhuan 1s linear infinite">
+
+    <div id="music_txt" style="color:white;position:absolute;left:-40px;top:30px;width:60px"></div>
+</div>
+</body>
+</html>
